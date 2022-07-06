@@ -12,7 +12,7 @@ redirect_from:
 ## Education and Academic Degrees
 * **University of Bern, Bern, Switzerland**
 	* CAS, Data Science and Machine Learning, 2018 - 2019
-* ** Instituto de Salud Carlos III (ISC III), Madrid, Spain**
+* **Instituto de Salud Carlos III (ISC III), Madrid, Spain**
 	* Msc. in Bioinformatics, 2017 - 2018
 * **Universidad Autonoma de Madrid, Spain**
 	* MsC. in Biotechnology, 2016 - 2017
@@ -26,6 +26,6 @@ redirect_from:
 	* Research Assistant, 2018 - 20NN
 * **Instituto de Investigacion Sanitaria Fundacion Jimenez Diaz, Madrid, Spain**
 	* Internship, 2018
-* ** InnoHealth Group, Madrid, Spain**
+* **InnoHealth Group, Madrid, Spain**
 	* Internship, 2017
 
