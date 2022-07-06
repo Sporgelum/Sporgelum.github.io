@@ -14,9 +14,10 @@ I am a MsC student in Bionformatics at the [Institute of Anatomy](https://www.an
 
 My major interest is learning about analysis, biostatistics and programming to focus of my skills and give the best support in my job.
 
-I am interested in Biology, Bioinformatics, Nutrition, Sports and Science in genenral.
+I am interested in Biology, Bioinformatics, Nutrition, Sports and Science in genenral.[<img alt="alt_text width="1080px" height="720px" src=""images/asics.jpg" />]
 
-I do enjoy being in Nature and one of my biggest hobbies having fun ![alt text](images/paraAmis.jpg).
+
+I do enjoy being in Nature and one of my biggest hobbies having fun.[<img alt="alt_text width="1080px" height="720px" src=""images/paraAmis.jpg" />].
 
 If any opportunity or contact I am happy to answer through any social platform.
 
