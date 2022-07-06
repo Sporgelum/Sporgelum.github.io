@@ -10,6 +10,16 @@ redirect_from:
 
 {% include base_path %}
 
-I am a computational epidemiologist and head of the [Interfaculty Platform for Data and Computational Science (INPUT)](https://www.ispm.unibe.ch/research/research_groups/input/index_eng.html) at the [Institute of Social and Preventive Medicine](https://www.ispm.unibe.ch) at the [University of Bern](https://www.unibe.ch), Switzerland.
+I am a MsC student in Bionformatics at the [Institute of Anatomy](https://www.ana.unibe.ch/index_eng.html) at the [University of Bern](https://www.unibe.ch/index_eng.html), Switzerland.
 
-A major focus of my research concerns how the population biology of infectious diseases is affected by public health interventions, dynamic patterns of host immunity, and environmental changes.
+My major interest is learning about analysis, biostatistics and programming to focus of my skills and give the best support in my job.
+
+I am interested in Biology, Bioinformatics, Nutrition, Sports and Science in genenral.
+
+I do enjoy being in Nature and one of my biggest hobbies having [fun](images/paraAmis.jpg).
+
+If any opportunity or contact I am happy to answer through any social platform.
+
+Have a nice day!
+
+
