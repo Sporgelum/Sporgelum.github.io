@@ -16,7 +16,7 @@ My major interest is learning about analysis, biostatistics and programming to f
 
 I am interested in Biology, Bioinformatics, Nutrition, Sports and Science in genenral.
 
-I do enjoy being in Nature and one of my biggest hobbies having [fun](images/paraAmis.jpg).
+I do enjoy being in Nature and one of my biggest hobbies having fun ![alt text](images/paraAmis.jpg).
 
 If any opportunity or contact I am happy to answer through any social platform.
 
