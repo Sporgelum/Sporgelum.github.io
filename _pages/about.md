@@ -10,7 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am a MsC student in Bionformatics at the [Institute of Anatomy](https://www.ana.unibe.ch/index_eng.html) at the [University of Bern](https://www.unibe.ch/index_eng.html), Switzerland.
+I am working as Bionformatician Assistant in the Laboratory of Prof. Nadia Mercader at the [Institute of Anatomy](https://www.ana.unibe.ch/index_eng.html) at the [University of Bern](https://www.unibe.ch/index_eng.html), Switzerland.
 
 My major interest is learning about analysis, biostatistics and programming to focus of my skills and give the best support in my job.
 
