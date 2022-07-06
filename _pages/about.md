@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "At the interface of basic research and public health"
+title: "In the main process of learning and performing a precise job"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
