@@ -23,7 +23,7 @@ redirect_from:
 
 ## Academic Appointments
 * **Institute of Anatomy, University of Bern, Switzerland**
-	* Research Assistant, 2018 - 20NN
+	* Bioinformatician Assistant, 2018 - 20NN
 * **Instituto de Investigacion Sanitaria Fundacion Jimenez Diaz, Madrid, Spain**
 	* Internship, 2018
 * **InnoHealth Group, Madrid, Spain**
