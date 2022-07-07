@@ -12,9 +12,7 @@ redirect_from:
 
 I am working as Bionformatician Assistant in the Laboratory of Prof. Nadia Mercader at the [Institute of Anatomy](https://www.ana.unibe.ch/index_eng.html) at the [University of Bern](https://www.unibe.ch/index_eng.html), Switzerland.
 
-My major interest is learning about analysis, biostatistics and programming to focus of my skills and give the best support in my job.
-
-I am interested in Biology, Bioinformatics, Nutrition, Sports and Science in genenral. <img alt="alt_text" width="1080px" height="720px" src="images/asics.jpeg" />
+I am interested in Biology, Bioinformatics, Biostatistics, Programming, Nutrition, Sports and Science in genenral to focus on improving my skills to give the best support in my job. <img alt="alt_text" width="1080px" height="720px" src="images/asics.jpeg" />
 
 
 I do enjoy being in Nature and one of my biggest hobbies having fun. <img alt="alt_text" width="1080px" height="720px" src="images/paraAmis.jpg" />
