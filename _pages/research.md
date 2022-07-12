@@ -32,6 +32,11 @@ Capture the micro, piwi, tRNA, rRNA and more to add species to the workflow esta
 Metabolic disturbances it is believed could arise from variants affecting the mitochondrions in charge of the energy supply of the cell and altering completely the organism.
 
 
+### Single Cell RNA-seq Analysis
+
+Using STAR and CellRanger for processing and Seurat(R) and Scanpy(Python) to analyze the data.
+
+
 ### Machine Learning classification project
 
 Multiple small projects for learning to use the algorithms and the requirements for them to apply them to data.
