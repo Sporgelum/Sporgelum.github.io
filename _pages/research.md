@@ -39,7 +39,8 @@ Using STAR and CellRanger for processing and Seurat(R) and Scanpy(Python) to ana
 ### Shiny web apps
 
 Development of web applicaitons, designed for an interactive data visualization and downloading.
-The web applications are customizable and very versatile and based in R programming language.
+The web applications are customizable, versatile, secure and based in R programming language.
+<a href="https://marius-alex.shinyapps.io/MitacoRa">Example (requires password and user)</a>
 
 ### Machine Learning classification project
 
