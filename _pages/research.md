@@ -36,6 +36,10 @@ Metabolic disturbances it is believed could arise from variants affecting the mi
 
 Using STAR and CellRanger for processing and Seurat(R) and Scanpy(Python) to analyze the data.
 
+### Shiny web apps
+
+Development of web applicaitons, designed for an interactive data visualization and downloading.
+The web applications are customizable and very versatile and based in R programming language.
 
 ### Machine Learning classification project
 
