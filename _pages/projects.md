@@ -17,7 +17,7 @@ The workflow established to analyze the RNA-seq gathered data can be understand 
 
 The Biological Interpretation is helped by multiple visualizations such as Integrated Networks realized with Gene Ontologies obtained through use of diverse tools.
 
-<img alt="alt_text" width="1920px" height="1080px" src="images/Networks_4.5_3_Injuries.png"/>
+<img alt="alt_text" width="1920px" height="1080px" src="/images/Networks_4.5_3_Injuries.png"/>
 
 The *R* code files that were used for this analysis will be found on <a href="https://github.com/j">GitHub</a> **after data is published (soon)**.
 
