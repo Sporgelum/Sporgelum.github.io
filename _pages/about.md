@@ -12,10 +12,17 @@ redirect_from:
 
 I am working as Bionformatician Assistant in the Laboratory of Prof. Nadia Mercader at the [Institute of Anatomy](https://www.ana.unibe.ch/index_eng.html) at the [University of Bern](https://www.unibe.ch/index_eng.html), Switzerland.
 
-I am interested in Biology, Bioinformatics, Biostatistics, Programming, Nutrition, Sports and Science in genenral to focus on improving my skills to give the best support in my job. <img alt="alt_text" width="1080px" height="720px" src="images/asics.jpeg" />
+I am interested in Biology, Bioinformatics, Biostatistics, Programming, Nutrition, Sports and Science in genenral. Focusing on improving my skills to give the best support in my job. <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" />
 
 
-I enjoy being in Nature and having time to do my hobbies. <img alt="alt_text" width="1080px" height="720px" src="images/paraAmis.jpg" />
+Some EXMAPLES screen captures.
+<img alt="alt_text" width="980px" height="1020px" src="images/misminis1.png" />
+
+
+
+I enjoy being in Nature and having time to do my hobbies. 
+<img alt="alt_text" width="480px" height="360px" src="images/paraAmis.jpg" />
+<img alt="alt_text" width="480px" height="360px" src="images/lobhornerme.jpeg" />
 
 If any opportunity or contact I am happy to answer through any social platform.
 
