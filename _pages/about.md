@@ -15,10 +15,15 @@ I am working as Bionformatician Assistant in the Laboratory of Prof. Nadia Merca
 I am interested in Biology, Bioinformatics, Biostatistics, Programming, Nutrition, Sports and Science in genenral. Focusing on improving my skills to give the best support in my job. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
 
 
-Some EXMAPLES screen captures.
-<img alt="alt_text" width="1080px" height="1020px" src="images/misminis1.png" />
-
-
+My recent ploting and tools useda are:
+* **R** <img alt="alt_text" width="120px" height="120px" src="images/clean_logo_rstudio.png" />
+* **Shiny** <img alt="alt_text" width="260px" height="120px" src="images/shiny.png" />
+* **Python** <img alt="alt_text" width="260px" height="120px" src="images/python.png" />
+* **Jupyter** <img alt="alt_text" width="260px" height="120px" src="images/jupy.png" />
+* **Cytoscape** <img alt="alt_text" width="260px" height="120px" src="images/cytoscape-logo.png" />
+* **Linux** <img alt="alt_text" width="160px" height="120px" src="images/linux.png" />
+* **Slurm** <img alt="alt_text" width="260px" height="120px" src="images/slurm.png" />
+* **Adobe** <img alt="alt_text" width="260px" height="120px" src="images/Adobe-Logo.png" />
 
 I enjoy being in Nature and having time to do my hobbies. 
 <img alt="alt_text" width="460px" height="420px" src="images/paraAmis.jpg" /> <img alt="alt_text" width="460px" height="420px" src="images/lobhornerme.jpeg" />
