@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "In the main process of learning and performing a precise job"
+title: "Diving into computational biology, genomics, statistics, machine learning"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
