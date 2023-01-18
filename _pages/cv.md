@@ -22,8 +22,10 @@ redirect_from:
 	* BSc. in Biology, 2012 - 2016
 
 ## Academic Appointments
+* **EPFL, Lausanne, Switzerland**
+        * PhD Candidate, 2022 - 20NN
 * **Institute of Anatomy, University of Bern, Switzerland**
-	* Bioinformatician Assistant, 2018 - 20NN
+	* Bioinformatician Assistant, 2018 - 2022
 * **Instituto de Investigacion Sanitaria Fundacion Jimenez Diaz, Madrid, Spain**
 	* Internship, 2018
 * **InnoHealth Group, Madrid, Spain**

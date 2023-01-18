@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Diving into computational biology, genomics, statistics, machine learning"
+title: "Interested into computational biology, genomics, statistics and machine learning"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -10,9 +10,9 @@ redirect_from:
 
 {% include base_path %}
 
-I am working as Bionformatician Assistant in the Laboratory of Prof. Nadia Mercader at the [Institute of Anatomy](https://www.ana.unibe.ch/index_eng.html) at the [University of Bern](https://www.unibe.ch/index_eng.html), Switzerland.
+I am a PhD Candidate at EPFL in the Computational Biology Program (EDCB) in the Laboratory of Prof. Bart Deplancke in the [SV-Deplanckelab](https://www.epfl.ch/labs/deplanckelab/) at the [EPFL](https://www.epfl.ch/en/) in Lausanne, Switzerland.
 
-I am interested in Biology, Bioinformatics, Biostatistics, Programming, Nutrition, Sports and Science in genenral. Focusing on improving my skills to give the best support in my job. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
+I am interested in Biology, Bioinformatics, Biostatistics, Metabolism, Programming, Nutrition, Sports and Science in genenral. Focusing on improving my skills to give the best support in my job. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
 
 
 My recent ploting and tools useda are:
@@ -28,8 +28,7 @@ My recent ploting and tools useda are:
 I enjoy being in Nature and having time to do my hobbies. 
 <img alt="alt_text" width="460px" height="420px" src="images/paraAmis.jpg" /> <img alt="alt_text" width="460px" height="420px" src="images/lobhornerme.jpeg" />
 
-If any opportunity or contact I am happy to answer through any social platform or email, see in Contact!
+If any questions, I am happy to answer through any social platform or email, see in Contact!
 
 Have a nice day!
-
 
