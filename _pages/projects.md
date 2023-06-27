@@ -10,9 +10,9 @@ author_profile: true
 
 ### Deep Learning 
 
-.* Single-cell-RNA-seq and Single-nuclei-RNA-seq data Integration using neural networks structures for dimensionality reduction and further downstream analysis processing.
-.* Data representation and embedding tuning using UMAP, PYMDE, PCA, K-Means...
-.* Face emotion recognition mini-project "for fun" to test and set up my local resources (GPU, SDD, and RAM).
+- Single-cell-RNA-seq and Single-nuclei-RNA-seq data Integration using neural networks structures for dimensionality reduction and further downstream analysis processing.
+- Data representation and embedding tuning using UMAP, PYMDE, PCA, K-Means...
+- Face emotion recognition mini-project "for fun" to test and set up my local resources (GPU, SDD, and RAM).
 
 The projects were executed using different libraries in Python.
 
