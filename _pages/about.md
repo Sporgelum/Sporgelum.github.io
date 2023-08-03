@@ -1,53 +1,35 @@
 ---
-layout: default
+permalink: /
+title: "Interested in computational biology, genomics, statistics, machine learning and sports"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
 ---
 
-# My Website
+{% include base_path %}
 
-<div class="header">
-    <h1>My Website</h1>
-    <p>Scroll down to see the fixed/sticky background effect.</p>
-</div>
+I am a Computational Biologist with experience in Genomic data analysis, having worked at [University of Bern](https://www.unibe.ch/index_eng.html) and the latest at [EPFL](https://www.epfl.ch/en/).
 
-<div class="menu">
-    <a href="#section1">Section 1</a>
-    <a href="#section2">Section 2</a>
-    <a href="#section3">Section 3</a>
-    <a href="#section4">Section 4</a>
-</div>
+My main interests are Biology, Bioinformatics, Biostatistics, Metabolism, Programming, Nutrition, and Sports. I focused on improving my skills to give the best support in my job. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
 
-<div class="main">
-    <div id="section1" class="section section1">
-        <h2>About Me</h2>
-        <p>I am a Computational Biologist with experience in Genomic data analysis, having worked at [University of Bern](https://www.unibe.ch/index_eng.html) and the latest at [EPFL](https://www.epfl.ch/en/).</p>
-        <p>My main interests are Biology, Bioinformatics, Biostatistics, Metabolism, Programming, Nutrition, and Sports. I focused on improving my skills to give the best support in my job.</p>
-    </div>
 
-    <div id="section2" class="section section2">
-        <h2>My Tools</h2>
-        <ul>
-            <li>Python</li>
-            <li>Sci-kit</li>
-            <li>R</li>
-            <li>Shiny</li>
-            <li>Jupyter</li>
-            <li>Cytoscape</li>
-            <li>Linux</li>
-            <li>Slurm</li>
-            <li>Adobe</li>
-        </ul>
-    </div>
+My recently used tools are:
+* **Python** <img alt="alt_text" width="260px" height="120px" src="images/python.png" />
+* **Sci-kit** <img alt="alt_text" width="260px" height="120px" src="images/scikit.jpg" />
+* **R** <img alt="alt_text" width="120px" height="120px" src="images/clean_logo_rstudio.png" />
+* **Shiny** <img alt="alt_text" width="260px" height="120px" src="images/shiny.png" />
+* **Jupyter** <img alt="alt_text" width="260px" height="120px" src="images/jupy.png" />
+* **Cytoscape** <img alt="alt_text" width="260px" height="120px" src="images/cytoscape-logo.png" />
+* **Linux** <img alt="alt_text" width="160px" height="120px" src="images/linux.png" />
+* **Slurm** <img alt="alt_text" width="260px" height="120px" src="images/slurm.png" />
+* **Adobe** <img alt="alt_text" width="260px" height="120px" src="images/Adobe-Logo.png" />
 
-    <div id="section3" class="section section3">
-        <h2>Hobbies and Interests</h2>
-        <p>I love being in Nature and having time for my hobbies.</p>
-    </div>
+I love being in Nature and having time for my hobbies. 
+<img alt="alt_text" width="460px" height="420px" src="images/paraAmis.jpg" /> <img alt="alt_text" width="460px" height="420px" src="images/lobhornerme.jpeg" />
 
-    <div id="section4" class="section section4">
-        <h2>Contact Me</h2>
-        <p>If any questions, I am happy to answer through any social platform or email, see in Contact!</p>
-        <p>Have a nice day!</p>
-    </div>
+If any questions, I am happy to answer through any social platform or email, check in **Contact**!
 
-</div>
+Have a nice day!
 
