@@ -1,3 +1,17 @@
+-
+permalink: /
+title: "Interested in computational biology, genomics, statistics, machine learning and sports"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+{% include base_path %}
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
