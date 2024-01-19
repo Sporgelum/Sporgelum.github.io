@@ -23,7 +23,7 @@ redirect_from:
 
 ## Academic Appointments
 * **EPFL, Lausanne, Switzerland**
-	* Bioinformatician Research Assistant, 2022 - 202N
+	* Bioinformatician Research Assistant, 2022 - 2023
 * **Institute of Anatomy, University of Bern, Switzerland**
 	* Bioinformatician Assistant, 2018 - 2022
 * **Instituto de Investigacion Sanitaria Fundacion Jimenez Diaz, Madrid, Spain**
