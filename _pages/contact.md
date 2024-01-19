@@ -19,4 +19,4 @@ E-mail: [marius.botos@epfl.ch](mailto:marius.botos-rogozsan@unibe.ch)
 E-mail: [emariusb@gmail.com](mailto:emariusb@gmail.com)
 
 
-<iframe src="https://www.google.com/maps/embed?pb=Universität+Bern/@46.9567633,7.4256296,429m/data=!3m1!1e3!4m6!3m5!1s0x478e39eaf41f4e47:0x382f5b1c10742e7e!8m2!3d46.956641!4d7.424759!16s%2Fg%2F11s5fv1w6c?entry=ttu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d299.6301014686469!2d7.426571838065675!3d46.95228579126863!2m3!1f358.7343750000003!2f60.875266530076516!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x478e3999323ab48f%3A0xbd2c952f78c8b6cf!2sL%C3%A4nggassstrasse%20122%2C%203012%20Bern!5e1!3m2!1sen!2sch!4v1705656329072!5m2!1sen!2sch" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
