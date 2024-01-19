@@ -9,13 +9,14 @@ author_profile: true
 
 Marius Alexandru Botos Rogozsan, MsC.
 
-[SV-Deplanckelab](https://people.epfl.ch/marius.botos?lang=en)  
-EPFL SV IBI-SV UPDEPLA  
-SV 3823 (Bâtiment SV)
-Station 19
-CH-1015 Lausanne
+[IVI-Talker Lab](https://www.ivi.unibe.ch/ueber_uns/personen/botos_marius/index_ger.html)  
+Universität Bern
+Vetsuisse-Fakultät 
+Länggassstrasse 120
+3012 Bern
 
-E-mail: [marius.botos@epfl.ch](mailto:marius.botos@epfl.ch)  
+E-mail: [marius.botos@epfl.ch](mailto:marius.botos-rogozsan@unibe.ch)  
 E-mail: [emariusb@gmail.com](mailto:emariusb@gmail.com)
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.38434367556!2d6.561849415491183!3d46.52029587912748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c30fd73eaaaab%3A0xea76391a8018ec7a!2sSV%20Building%2C%20EPFL!5e0!3m2!1sen!2sch!4v1674037462216!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<iframe src="https://www.google.com/maps/embed?pb=Universität+Bern/@46.9567633,7.4256296,429m/data=!3m1!1e3!4m6!3m5!1s0x478e39eaf41f4e47:0x382f5b1c10742e7e!8m2!3d46.956641!4d7.424759!16s%2Fg%2F11s5fv1w6c?entry=ttu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
