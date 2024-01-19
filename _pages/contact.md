@@ -16,7 +16,7 @@ Länggassstrasse 120
 3012 Bern  
 
 
-E-mail: [marius.botos@epfl.ch](mailto:marius.botos-rogozsan@unibe.ch)  
+E-mail: [marius.botos-rogozsan@unibe.ch](mailto:marius.botos-rogozsan@unibe.ch)  
 E-mail: [emariusb@gmail.com](mailto:emariusb@gmail.com)
 
 
