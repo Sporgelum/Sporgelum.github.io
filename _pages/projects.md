@@ -7,132 +7,79 @@ author_profile: true
 
 {% include base_path %}
 
+## Overview
 
+This page provides an overview of various projects that involve data gathering, cleaning, integration and analysis. The projects primarily focus on RNA-seq, scSeq, snSeq and computing resources. They were executed using different libraries in Python and R among others.
+
+## Projects
 
 ### Data Gathering
 
-  - Extracting datasets and information from databases containing transcriptomics information such as SRA, GEO, ENA, dbGAP, Census.
+This phase involves extracting datasets and information from databases containing transcriptomics information. The databases include [SRA](https://www.ncbi.nlm.nih.gov/sra/), [GEO](https://www.ncbi.nlm.nih.gov/geo/), [ENA](https://www.ebi.ac.uk/ena), [dbGAP](https://www.ncbi.nlm.nih.gov/gap/), [Census](https://cellxgene.cziscience.com/), etc.
 
 ### Data Cleaning
 
-  - Filtering the information that represents the best structure and quality to be used for later biological questions.
-  - Quality checks are essential steps that will influence the future of the analysis. 
+Data cleaning is a crucial step in the analysis. It involves filtering the information to ensure the best structure and quality for later biological questions. Quality checks are essential steps that will influence the future of the analysis.
 
+### Integration of Multi-Sample Datasets
 
-### Integration of multi-sample datasets
-
-- Single-cell-RNA-seq and Single-nuclei-RNA-seq data Integration using neural network structures for dimensionality reduction and further downstream analysis processing.
-- Data representation and embedding tuning using UMAP, PYMDE, PCA, K-Means...
-
-The projects were executed using different libraries in Python.
-
-
+This project involves integrating Single-cell-RNA-seq and Single-nuclei-RNA-seq data using neural network structures for dimensionality reduction and further downstream analysis processing. Data representation and embedding tuning are performed using UMAP, PYMDE, PCA, K-Means, and other techniques.
 
 ### RNA-seq 
 
-## Comparisons of RNA-seq data from *Danio rerio* heart injury models
+#### Comparisons of RNA-seq Data from *Danio rerio* Heart Injury Models
 
-Workflow established to analyze the RNA-seq of heart injury models publicly available. Looking into the biological differences that the injury models of interest effect on the regeneration capabilities of Zebrafish and adds information to the genes (data of interest) obtained after the analysis.
+This project involves establishing a workflow to analyze the RNA-seq of heart injury models publicly available. The goal is to understand the biological differences that the injury models of interest effect on the regeneration capabilities of Zebrafish and adds information to the genes obtained after the analysis. The biological interpretation is aided by multiple visualizations such as Integrated Networks realized with Gene Ontologies. The R code files used for this analysis can be found on <a href="[https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022]">GitHub</a>.
 
 <!---   <img alt="alt_text" width="1920px" height="1080px" src="/images/Figure1_corrected_Shape_and_Index_v4.png" /> -->
 
 
+#### Small RNA-seq Species Data from *Danio rerio* Analysis
 
-Biological Interpretation is helped by multiple visualizations such as Integrated Networks realized with Gene Ontologies.
+This project involves establishing a pipeline to capture the micro, piwi, tRNA, rRNA, and more available annotation species in Ensembl, NCBI, and other resources to add species to the established workflow.
 
 <!---   <img alt="alt_text" width="1920px" height="1080px" src="/images/Networks_4.5_3_Injuries.png"/> -->
 
 
-The *R* code files that were used for this analysis will be found on <a href="[https://github.com/j](https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022)">GitHub</a>.
+#### Variant Calling for RNA-seq Data from *Danio rerio* for Capturing the Haplotypes Involved in Metabolic Disturbances
 
-
-## small RNA-seq species data from *Danio rerio* analysis
-
-Establishment of a pipeline to capture the micro, piwi, tRNA, rRNA, and more available annotation species in Ensembl, NCBI and other resources to add species to the workflow established.
-
-
-
-## Variant Calling for RNA-seq data from *Danio rerio* for capturing the Haplotypes involved in metabolic disturbances
-
-Metabolic disturbances are believed to arise from variants affecting the mitochondrion in charge of the energy supply of the cell and altering completely the organism. This was analyzed by performing variant calling and exploring the genes involved in the energy supply.
-
+This project involves performing variant calling and exploring the genes involved in the energy supply to understand metabolic disturbances believed to arise from variants affecting the mitochondrion.
 
 ### scSeq and snSeq
 
-- **Adipose Tissue**
+#### Adipose Tissue
 
-## Single-cell and single-nuclei RNA-seq integration of Adipose Tissue samples
+##### Single-Cell and Single-Nuclei RNA-seq Integration of Adipose Tissue Samples
 
-  - Samples were extracted either stromal vascular fractions(SVF) or full adipose tissue of Omental and Subcutaneous in Human and Mouse.
+This project involves extracting samples from either stromal vascular fractions (SVF) or full adipose tissue of Omental and Subcutaneous in Human and Mouse.
 
-    
-## sc/sn RNA-seq based deconvolution of sequenced disease associatted RNA-seq cohorts 
+##### sc/sn RNA-seq Based Deconvolution of Sequenced Disease Associated RNA-seq Cohorts 
 
-  - Reference above was used for deconvolution of RNA-seq cohorts affected by Diabetes or Obesity to analyze if there is a correlation between disease and celltype.
+This project involves using the reference above for deconvolution of RNA-seq cohorts affected by Diabetes or Obesity to analyze if there is a correlation between disease and cell type.
 
+##### Paired Single Cell-RNA-seq and Single Nuclei-ATAC-seq in Mouse of Specific Adipose Precursor Cell Type
 
-## paired single cell-RNA-seq and single nuclei-ATAC-seq in Mouse of specific Adipose Precursor cell type
+This project involves using paired RNA and DNA accessibility data to investigate the relationship between gene expression and DNA accessibility, as well as identify the genes involved in the specific dataset. The data will be analyzed using various techniques, including default mapping and remapping of the accessibility regions using MACS2, following the guidelines per cluster to improve accuracy. The integrated analysis will be performed using MultiVI, a tool framework based on neural networks, to uncover associations between cell expression and DNA accessibility.
 
-  - Using paired RNA and DNA accessibility  allows to look at the genetic and how is the expression paired to the accessibility and which genes are involved in the specific dataset.
+#### Immunology
 
-- **Immunology**
+##### scSeq Data Integration of Multiple Non-Model Organism at Using Different Data Origins such as Blood, PBMC or Lymph Node
 
-## scSeq data integration of multiple non-model organism at using different data origins such as blood, PBMC or lymph node
+This project involves establishing a workflow for reference genome building, mapping of the raw fastq files, quality checking, processing, and integration. It is applied to multiple species to decipher the composition similarities of the Mononuclear Phagocyte System (MPS) in the tissues above mentioned. The species include Bovine, Horse, Porcine, Canine, Human, and Mouse.
 
-  - Establishment of Workflow:
-      + reference genome building
-      + mapping of the raw fastq files
-      + Quality checking
-      + Processing
-      + Integration
-   
-  - Applied to multiple species to decipher the composition similarities of the Mononuclear Phagocyte System (MPS) in the tissues above mentioned
-      + Bovine
-      + Horse
-      + Porcine
-      + Canine
-      + Human
-      + Mouse
-        
+### Computing Resources
+
+This projects involves computing resources that are obtained via connection to remote resources "Cluster based".
+
+The resources are managed via SLURM in Linux based clusters that allow working with Python and R interactively via VSCode or RStudio(Posit).
+
+The tools used include FASTQC, MultiQ, Cutadap, STAR, CellRanger, BWA, Samtools, Seurat(R), Scanpy(Python), scVI(Python), clusterProfiler, GSEA, GO, KEGG, decoupleR, Census, Celltypist, and many more for customized visualization and analysis from raw to end.
 
 
+### Shiny Web Apps
 
-## Computing Resources
-Established connection to remote resources "Cluster based" for data processing.
+This project involves the development of web applications, designed for interactive data visualization and downloading. The web applications are customizable, versatile, secure, and based on the R programming language. An example can be found <a href="[https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022]">here</a>.
 
-- Combining resources managed via SLURM in Linux based clusters that allow to be working with Python and R  and to be used interactively via VSCode or RStudio(Posit)
-    + VSCode
-        * Python
-        * R
-          
-    + SLURM
-    + Bash
-    + Anaconda
+### Fun Projects
 
-  - Tools used:
-    + FASTQC
-    + MultiQ
-    + Cutadap
-    + STAR
-    + CellRanger
-    + BWA
-    + Samtools
-  - For further processing:
-    + Seurat(R)
-    + Scanpy(Python)
-    + scVI(Python)
-    + clusterPorfiler
-    + GSEA, GO, KEGG,
-    + decoupleR, Census, Celltypist, etc...
-
-* many more for customized visualization and analysis from raw to end.
-
-## Shiny web apps
-
-Development of web applications, designed for interactive data visualization and downloading.
-The web applications are customizable, versatile, secure, and based on the R programming language.
-<a href="https://marius-alex.shinyapps.io/MitacoRa">Example (requires password and user)</a>
-
-### Fun projects
-
-- Face emotion recognition mini-project "for fun" to test and set up my local resources (GPU, SDD, and RAM).
+This project involves a face emotion recognition mini-project "for fun" to test and set up local resources (GPU, SDD, and RAM).
