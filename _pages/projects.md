@@ -29,7 +29,7 @@ This project involves integrating Single-cell-RNA-seq and Single-nuclei-RNA-seq 
 
 #### Comparisons of RNA-seq Data from *Danio rerio* Heart Injury Models
 
-This project involves establishing a workflow to analyze the RNA-seq of heart injury models publicly available. The goal is to understand the biological differences that the injury models of interest effect on the regeneration capabilities of Zebrafish and adds information to the genes obtained after the analysis. The biological interpretation is aided by multiple visualizations such as Integrated Networks realized with Gene Ontologies. The R code files used for this analysis can be found on <a href="[https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022]">GitHub</a>.
+This project involves establishing a workflow to analyze the RNA-seq of heart injury models publicly available. The goal is to understand the biological differences that the injury models of interest effect on the regeneration capabilities of Zebrafish and adds information to the genes obtained after the analysis. The biological interpretation is aided by multiple visualizations such as Integrated Networks realized with Gene Ontologies. The R code files used for this analysis can be found on <a href="https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022">GitHub</a>.
 
 <!---   <img alt="alt_text" width="1920px" height="1080px" src="/images/Figure1_corrected_Shape_and_Index_v4.png" /> -->
 
@@ -78,7 +78,7 @@ The tools used include FASTQC, MultiQ, Cutadap, STAR, CellRanger, BWA, Samtools,
 
 ### Shiny Web Apps
 
-This project involves the development of web applications, designed for interactive data visualization and downloading. The web applications are customizable, versatile, secure, and based on the R programming language. An example can be found <a href="[https://mybinder.org/v2/gh/MercaderLabAnatomy/PUB_Botos_et_al_2022_shinyapp_binder/HEAD?urlpath=shiny/bus-dashboard/]">here</a>.
+This project involves the development of web applications, designed for interactive data visualization and downloading. The web applications are customizable, versatile, secure, and based on the R programming language. An example can be found <a href="https://mybinder.org/v2/gh/MercaderLabAnatomy/PUB_Botos_et_al_2022_shinyapp_binder/HEAD?urlpath=shiny/bus-dashboard/">here</a>.
 
 ### Fun Projects
 
