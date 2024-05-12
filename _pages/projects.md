@@ -78,7 +78,7 @@ The tools used include FASTQC, MultiQ, Cutadap, STAR, CellRanger, BWA, Samtools,
 
 ### Shiny Web Apps
 
-This project involves the development of web applications, designed for interactive data visualization and downloading. The web applications are customizable, versatile, secure, and based on the R programming language. An example can be found <a href="[https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022]">here</a>.
+This project involves the development of web applications, designed for interactive data visualization and downloading. The web applications are customizable, versatile, secure, and based on the R programming language. An example can be found <a href="[https://mybinder.org/v2/gh/MercaderLabAnatomy/PUB_Botos_et_al_2022_shinyapp_binder/HEAD?urlpath=shiny/bus-dashboard/]">here</a>.
 
 ### Fun Projects
 
