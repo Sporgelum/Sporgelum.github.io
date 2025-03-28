@@ -10,9 +10,9 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Computational Biologist with experience in Genomic data analysis, having worked at [University of Bern](https://www.unibe.ch/index_eng.html) and the latest at [EPFL](https://www.epfl.ch/en/).
+I am a Computational Biologist with experience in Bioinformatics, worked at Institute of Anatomy at [University of Bern](https://www.unibe.ch/index_eng.html), at [EPFL](https://www.epfl.ch/en/), and currently at the Veterinary Faculty combining Bioinformatics and Immunology back at [University of Bern](https://www.unibe.ch/index_eng.html)
 
-My main interests are Biology, Bioinformatics, Biostatistics, Metabolism, Programming, Nutrition, and Sports. I focused on improving my skills to give the best support in my job. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
+My main interests are Biology, Bioinformatics, Immunology, Biostatistics, Metabolism, Programming, Nutrition, and Sports. I focused on improving my skills to give the best support and have a broad spectrum of resources. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
 
 
 My recently used tools are:
