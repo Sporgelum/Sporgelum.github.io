@@ -10,7 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Computational Biologist with experience in Bioinformatics, worked at Institute of Anatomy at [University of Bern](https://www.unibe.ch/index_eng.html), at [EPFL](https://www.epfl.ch/en/), and currently at the Veterinary Faculty combining Bioinformatics and Immunology back at [University of Bern](https://www.unibe.ch/index_eng.html)
+I am a Computational Biologist with experience in Bioinformatics, who has worked with Zebrafish at the Institute of Anatomy at [University of Bern](https://www.unibe.ch/index_eng.html), with Human, Mouse and Drosophila at [EPFL](https://www.epfl.ch/en/), and currently with multiple non-model domestic species at the Veterinary Faculty combining Bioinformatics and Immunology back at [University of Bern](https://www.unibe.ch/index_eng.html).
 
 My main interests are Biology, Bioinformatics, Immunology, Biostatistics, Metabolism, Programming, Nutrition, and Sports. I focused on improving my skills to give the best support and have a broad spectrum of resources. <!--- <img alt="alt_text" width="300px" height="300px" src="images/asics.jpeg" /> --->
 
