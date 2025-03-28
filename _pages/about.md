@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Interested in Computational Biology, Genomics, Statistics, Machine Learning, and Sports"
+title: "About Me"
 excerpt: "About Me"
 author_profile: true
 redirect_from: 
@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-# **About Me**  
+# **Interested in the intersection among Biology, Immunology, Genomics, Statistics, Computer Science, Machine Learning, Neural Networks, Protein Large Language Models, AI, and Sports**  
 
-I am a **Computational Biologist** with a strong background in **Bioinformatics** and a passion for understanding immune systems at the single-cell level. My work spans multiple species and research institutions, focusing on **transcriptomics and genomics** across different biological models.
+I am a **Molecular Biologist** with a strong background in **Bioinformatics** and a passion for understanding immune systems at the single-cell level. My work spans multiple species and research institutions, focusing on **transcriptomics and genomics** across different biological models.
 
 ## **Research Experience**  
 
