@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# **Interested in the intersection among Biology, Immunology, Genomics, Statistics, Computer Science, Machine Learning, Neural Networks, Protein Large Language Models, AI, and Sports**  
+### 👉 "Interested in the intersection of Biology, Immunology, Genomics, Statistics, Computer Science, Machine Learning, Neural Networks, Protein Large Language Models, AI, and Sports."
 
 I am a **Molecular Biologist** with a strong background in **Bioinformatics** and a passion for understanding immune systems at the single-cell level. My work spans multiple species and research institutions, focusing on **transcriptomics and genomics** across different biological models.
 
