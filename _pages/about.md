@@ -19,7 +19,7 @@ I am a **Molecular Biologist** with a strong background in **Bioinformatics** an
 Explored gene expression patterns in zebrafish to advance anatomical and developmental biology research.  
 
 ### 🧬 Single-Cell Omics & Genomics  
-**[EPFL](https://www.epfl.ch/en/)**  
+**[EPFL](https://www.epfl.ch/schools/sv/)**  
 Worked on **human and mouse single-cell omics** and **Drosophila genomics**, uncovering insights into cellular diversity and genetic regulation.  
 
 ### 🐾 Immunology of Non-Model Species  
