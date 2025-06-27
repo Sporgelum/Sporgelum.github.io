@@ -9,14 +9,14 @@ author_profile: true
 
 Marius Alexandru Botos Rogozsan, MsC.
 
-[IVI-Talker Lab](https://www.ivi.unibe.ch/ueber_uns/personen/botos_marius/index_ger.html)  
+[IVI](https://www.ivi.unibe.ch/ueber_uns/personen/botos_marius/index_ger.html)  
 Universität Bern  
 Vetsuisse-Fakultät  
 Länggassstrasse 120  
 3012 Bern  
 
 
-E-mail: [marius.botos-rogozsan@unibe.ch](mailto:marius.botos-rogozsan@unibe.ch)  
+E-mail: [marius.botos@unibe.ch](mailto:marius.botos-rogozsan@unibe.ch)  
 E-mail: [emariusb@gmail.com](mailto:emariusb@gmail.com)
 
 
