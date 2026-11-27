@@ -13,7 +13,7 @@
     { id: 'publications', label: 'Publications', type: 'hub', tab: 'publications' },
     { id: 'contact', label: 'Contact', type: 'hub', tab: 'contact' },
 
-    { id: 'ivi', label: 'IVI · Bern (now)', parent: 'cv', tab: 'cv' },
+    { id: 'ivi', label: 'IVI · Bern (2024–now)', parent: 'cv', tab: 'cv' },
     { id: 'epfl', label: 'EPFL', parent: 'cv', tab: 'cv' },
     { id: 'anat', label: 'Anatomy · Bern', parent: 'cv', tab: 'cv' },
     { id: 'msc', label: 'MSc × 2 · Madrid', parent: 'cv', tab: 'cv' },
