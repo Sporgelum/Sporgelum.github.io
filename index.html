@@ -77,84 +77,123 @@
   <div class="page-head">
     <span class="label">Curriculum vitae</span>
     <h2>From the bench to the <em>cluster</em></h2>
+    <p class="muted">Computational biologist and immunologist · Single-cell &amp; systems immunology · Non-model species bioinformatics</p>
   </div>
 
   <div class="cv-grid">
     <aside class="cv-card ripstop panel">
       <img class="portrait" src="img/portrait.jpg" alt="Portrait of Marius Botos" width="320" height="426">
       <h3>Marius Alexandru Botos Rogozsan</h3>
+      <p class="muted">PhD candidate, University of Bern</p>
       <p class="muted">MSc Bioinformatics · MSc Biotechnology</p>
-      <p class="muted">Bern · Lausanne · Madrid</p>
       <div class="chips">
         <a class="chip" href="https://github.com/Sporgelum">GitHub</a>
         <a class="chip" href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Scholar</a>
         <a class="chip" href="https://www.linkedin.com/in/mabotos22">LinkedIn</a>
       </div>
-      <div class="avail">
-        <span class="news-dot"></span> Available from summer 2027
-      </div>
+      <a class="download" href="files/CV_Marius_Botos_Rogozsan.pdf" download>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download CV (PDF)
+      </a>
+      <div class="avail"><span class="news-dot"></span> Available from summer 2027</div>
+
+      <h4 class="side-head">Languages</h4>
+      <ul class="langs">
+        <li><span>Spanish</span><i>native</i></li>
+        <li><span>Romanian</span><i>native</i></li>
+        <li><span>English</span><i>fluent</i></li>
+        <li><span>German</span><i>intermediate</i></li>
+        <li><span>French</span><i>basic</i></li>
+      </ul>
+      <h4 class="side-head">Interests</h4>
+      <p class="muted small">Paragliding, skiing, climbing and outdoor sports. Nutrition, machine learning, protein language models, bees.</p>
     </aside>
 
     <div class="cv-main">
-      <h3 class="cv-section">Experience</h3>
+      <h3 class="cv-section">Profile</h3>
+      <p class="profile">Computational immunologist and molecular biologist working on transcriptomics and genomics across model and domestic species, from zebrafish heart regeneration to obesity genomics. I build and run HPC workflows and statistical models that turn bulk and single-cell data into biological insight.</p>
+
+      <h3 class="cv-section">Research experience</h3>
       <ol class="timeline">
         <li>
-          <span class="when">2024 – now</span>
+          <span class="when">Jan 2024 – Jun 2027</span>
           <div>
-            <h4>Bioinformatician, Institute of Virology and Immunology (IVI)</h4>
-            <p class="where">Vetsuisse Faculty, University of Bern</p>
-            <p>Mapping the mononuclear phagocyte system at single-cell resolution across non-model domestic species (bovine, equine, porcine, canine) alongside human and mouse.</p>
+            <h4>PhD candidate · Immunology of non-model species</h4>
+            <p class="where">Institute of Virology and Immunology (IVI) &amp; Vetsuisse Faculty, University of Bern</p>
+            <ul class="bullets">
+              <li><b>Systems vaccinology:</b> BTM / GSEA profiling of sheep whole blood across adjuvant regimens.</li>
+              <li><b>Single-cell atlas:</b> 10x scRNA-seq of sheep whole blood with a STARsolo SLURM pipeline, CellBender and scVI-based annotation.</li>
+              <li><b>Bulk deconvolution:</b> my own Python pipeline estimating cell-type fractions in 170 blood samples, benchmarked against CIBERSORTx, MuSiC and Bisque.</li>
+              <li><b>MHC, repertoire &amp; TFs:</b> MHC allele expression (Salmon, custom IPD-MHC reference), TCR/BCR repertoires (MiXCR, custom sheep IMGT library) and TF activities (decoupleR).</li>
+              <li><b>Responder prediction:</b> modelling high vs low antibody responders from early RNA-seq, BTM signatures, TF activity, repertoire and MHC variants.</li>
+              <li><b>Comparative DCs:</b> transitional DCs and the MPS in pig and horse blood, integrated across species with protein language models and expression.</li>
+              <li><b>Digital pathology:</b> manual vs computational quantification of SARS-CoV-2 in infected mice.</li>
+            </ul>
           </div>
         </li>
         <li>
-          <span class="when">2022 – 2023</span>
+          <span class="when">Nov 2022 – Dec 2023</span>
           <div>
-            <h4>Bioinformatician Research Assistant, EPFL</h4>
-            <p class="where">Lausanne, Switzerland</p>
-            <p>Human and mouse single-cell omics and <i>Drosophila</i> genomics. Integration of sc/snRNA-seq atlases of adipose tissue and paired multiome analysis.</p>
+            <h4>Bioinformatician research assistant</h4>
+            <p class="where">Laboratory of Systems Biology and Genetics, EPFL &amp; SIB, Lausanne</p>
+            <ul class="bullets">
+              <li><b>Joints, BMI &amp; bone marrow:</b> knee and hip associations with BMI, and how bone-marrow cells shift to a more inflammatory profile in obesity.</li>
+              <li><b><i>Drosophila</i> genomics:</b> NUMT analysis across inbred genomes with Unix / Python / R pipelines and circos.</li>
+              <li><b>Obesity genomics:</b> single-cell RNA / ATAC-seq (scVI, Scanpy, Signac, PeakVI on GPU / HPC) of adipose precursors in mouse and human fat, linked to obesity genetics.</li>
+            </ul>
           </div>
         </li>
         <li>
-          <span class="when">2018 – 2022</span>
+          <span class="when">Nov 2018 – Oct 2022</span>
           <div>
-            <h4>Bioinformatician Assistant, Institute of Anatomy</h4>
-            <p class="where">University of Bern, Switzerland</p>
-            <p>Bulk and small RNA-seq of zebrafish heart regeneration, meta-analysis of injury models and interactive Shiny apps for the lab.</p>
-          </div>
-        </li>
-        <li>
-          <span class="when">2018</span>
-          <div>
-            <h4>Intern, Instituto de Investigación Sanitaria Fundación Jiménez Díaz</h4>
-            <p class="where">Madrid, Spain</p>
-          </div>
-        </li>
-        <li>
-          <span class="when">2017</span>
-          <div>
-            <h4>Intern, InnoHealth Group</h4>
-            <p class="where">Madrid, Spain</p>
+            <h4>Bioinformatician research assistant</h4>
+            <p class="where">Developmental Biology and Regeneration, Institute of Anatomy, University of Bern</p>
+            <ul class="bullets">
+              <li><b>Heart regeneration meta-analysis:</b> first-author study of 36 RNA-seq samples across three cardiac injury models, published with an interactive Shiny / Cytoscape app.</li>
+              <li><b>Reporting:</b> results shared through Shiny and Streamlit apps.</li>
+              <li><b>Genomics support:</b> bulk RNA-seq, SNP / indel calling and early single-cell analyses behind three co-authored zebrafish papers.</li>
+            </ul>
           </div>
         </li>
       </ol>
 
       <h3 class="cv-section">Education</h3>
       <div class="edu">
-        <div class="edu-item ripstop panel"><span class="when">2018 – 2019</span><h4>CAS Data Science &amp; Machine Learning</h4><p>University of Bern</p></div>
-        <div class="edu-item ripstop panel"><span class="when">2017 – 2018</span><h4>MSc Bioinformatics</h4><p>Instituto de Salud Carlos III, Madrid</p></div>
-        <div class="edu-item ripstop panel"><span class="when">2016 – 2017</span><h4>MSc Biotechnology</h4><p>Universidad Autónoma de Madrid</p></div>
-        <div class="edu-item ripstop panel"><span class="when">2015 – 2016</span><h4>BSc Biological Sciences</h4><p>University of Hertfordshire, UK</p></div>
-        <div class="edu-item ripstop panel"><span class="when">2012 – 2016</span><h4>BSc Biology</h4><p>Universidad de Alcalá de Henares</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2024 – present</span><h4>PhD candidate</h4><p>Graduate School for Cellular and Biomedical Sciences, University of Bern</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2019 – 2020</span><h4>CAS Applied Data Science &amp; Machine Learning</h4><p>University of Bern</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2017 – 2018</span><h4>MSc Bioinformatics &amp; Omics for Personalized Medicine</h4><p>ENS (ISCIII) with CNIO, Madrid · Thesis: GATK pipeline for rare-disease variant detection (IIS-Fundación Jiménez Díaz)</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2016 – 2017</span><h4>MSc Biotechnology</h4><p>Universidad Autónoma de Madrid · Thesis: age-related NUMTs in <i>Drosophila</i> genomes (InnoHealth group)</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2012 – 2016</span><h4>BSc Biology</h4><p>Universidad de Alcalá, Madrid · Thesis: antibiotic-resistance genes in environmental waters, University of Hertfordshire (UK)</p></div>
       </div>
 
       <h3 class="cv-section">Toolbox</h3>
       <div class="skills">
-        <div><span class="label">Languages</span><p>Python · R · Bash</p></div>
-        <div><span class="label">Single-cell &amp; omics</span><p>Scanpy · scVI / scANVI / MultiVI · Seurat · CellRanger · CellTypist · Census · decoupleR</p></div>
-        <div><span class="label">Sequencing</span><p>FastQC · MultiQC · Cutadapt · STAR · BWA · Samtools · MACS2 · variant calling</p></div>
-        <div><span class="label">Analysis</span><p>scikit-learn · PyMDE · UMAP · clusterProfiler · GSEA · GO / KEGG · Cytoscape</p></div>
-        <div><span class="label">Infrastructure</span><p>Linux · SLURM clusters · VS Code · RStudio / Posit · Jupyter</p></div>
-        <div><span class="label">Apps &amp; design</span><p>R Shiny · Adobe Suite</p></div>
+        <div><span class="label">Programming</span><p>Python · R / Shiny · Bash · Git</p></div>
+        <div><span class="label">Single-cell &amp; omics</span><p>Scanpy · Seurat · scverse · ESM · CellBender · STAR(solo) · Salmon · edgeR · GATK</p></div>
+        <div><span class="label">Repertoire</span><p>MiXCR · IPD-MHC</p></div>
+        <div><span class="label">Statistics &amp; ML</span><p>Statistical modelling and machine learning in Python (scikit-learn) and R (caret)</p></div>
+        <div><span class="label">Compute</span><p>Linux · SLURM · Apptainer · Docker · GPU</p></div>
+        <div><span class="label">Visualisation</span><p>ggplot2 · circos · Cytoscape · Shiny · Streamlit</p></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 class="cv-section">Courses</h3>
+          <ul class="plain">
+            <li><b>Winter School in Deep Learning</b><span>University of Bern, 2026</span></li>
+            <li><b>Introduction to Bayesian Statistics</b><span>SIB, 2024 – 2025</span></li>
+            <li><b>Immunology Book Club</b><span>University of Bern, 2024 – 2025</span></li>
+            <li><b>Cellular and Molecular Immunology</b><span>University of Bern, 2024</span></li>
+            <li><b>Docker &amp; Singularity</b><span>SIB / University of Bern, 2019</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="cv-section">Presentations</h3>
+          <ul class="plain">
+            <li><b>Talk · Early blood transcriptomic signatures predict long-term antibody responses and inform adjuvant selection</b><span>VIA meeting, 2026</span></li>
+            <li><b>Poster · Deciphering dendritic-cell heterogeneity across species using protein language model-based tools</b><span>IVIS, 2025</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -169,6 +208,31 @@
   </div>
 
   <div class="cards">
+    <article class="card ripstop panel" id="p-vaccinology">
+      <span class="tag">Systems vaccinology · Sheep</span>
+      <h3>Predicting vaccine responders</h3>
+      <p>BTM / GSEA profiling of sheep whole blood across adjuvant regimens, and models that tell high from low antibody responders using early RNA-seq, TF activity, repertoire and MHC variants.</p>
+    </article>
+    <article class="card ripstop panel" id="p-deconv-blood">
+      <span class="tag">Python pipeline</span>
+      <h3>Blood deconvolution at scale</h3>
+      <p>My own pipeline estimating cell-type fractions in 170 blood samples, benchmarked against CIBERSORTx, MuSiC and Bisque.</p>
+    </article>
+    <article class="card ripstop panel" id="p-repertoire">
+      <span class="tag">MHC · TCR / BCR</span>
+      <h3>MHC alleles &amp; immune repertoires</h3>
+      <p>MHC allele expression with a custom IPD-MHC reference and TCR / BCR repertoires with MiXCR and a custom sheep IMGT library.</p>
+    </article>
+    <article class="card ripstop panel" id="p-pathology">
+      <span class="tag">Digital pathology · Viruses 2026</span>
+      <h3>Counting SARS-CoV-2 in tissue</h3>
+      <p>Computational vs manual quantification of SARS-CoV-2 nucleocapsid immunolabelling in infected mice. Shared first author.</p>
+    </article>
+    <article class="card ripstop panel" id="p-numts">
+      <span class="tag">Drosophila genomics</span>
+      <h3>NUMTs across fly genomes</h3>
+      <p>Nuclear mitochondrial insertions across inbred <i>Drosophila</i> genomes, with Unix / Python / R pipelines and circos plots.</p>
+    </article>
     <article class="card ripstop panel" id="p-zebrafish">
       <span class="tag">RNA-seq · Zebrafish</span>
       <h3>Heart regeneration meta-analysis</h3>
@@ -307,15 +371,17 @@
   <div class="page-head">
     <span class="label">Publications</span>
     <h2>In <em>print</em></h2>
-    <p class="muted">Full list on <a href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Google Scholar</a>.</p>
+    <p class="muted">Also on <a href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Google Scholar</a>. * Equal contribution.</p>
   </div>
   <ol class="pubs">
-    <li class="ripstop panel"><span class="when">2023 · Scientific Reports</span><a href="https://doi.org/10.1038/s41598-023-32272-6">Transcriptomic data meta-analysis reveals common and injury model specific gene expression changes in the regenerating zebrafish heart</a><p><b>Botos MA</b>, Arora P, Chouvardas P, Mercader N</p></li>
-    <li class="ripstop panel"><span class="when">2020 · EMBO Reports</span><a href="https://doi.org/10.15252/embr.202050287">Scaf1 promotes respiratory supercomplexes and metabolic efficiency in zebrafish</a><p>García-Poyatos C, Cogliati S, Calvo E, … <b>Botos M</b>, … Mercader N, Enríquez JA</p></li>
-    <li class="ripstop panel"><span class="when">2019 · Cell Reports</span><a href="https://doi.org/10.1016/j.celrep.2019.09.041">Adult sox10+ cardiomyocytes contribute to myocardial regeneration in the zebrafish</a><p>Sande-Melon M, Marques IJ, … <b>Botos MA</b>, … Mercader N</p></li>
-    <li class="ripstop panel"><span class="when">2019 · Cell Reports</span><a href="https://doi.org/10.1016/j.celrep.2019.06.091">Wilms tumor 1b expression defines a pro-regenerative macrophage subtype and is required for organ regeneration in the zebrafish</a><p>Sanz-Morejón A, García-Redondo AB, … <b>Botos MA</b>, … Mercader N</p></li>
-    <li class="ripstop panel"><span class="when">2019 · bioRxiv</span><a href="https://doi.org/10.1101/662536">Pre-existent adult sox10+ cardiomyocytes contribute to myocardial regeneration in the zebrafish</a><p>Sande-Melón M, … <b>Botos M</b>, … Mercader N</p></li>
-    <li class="ripstop panel"><span class="when">2019 · bioRxiv</span><a href="https://doi.org/10.1101/818286">Respiratory supercomplexes provide metabolic efficiency in zebrafish</a><p>García-Poyatos C, … <b>Botos M</b>, … Enríquez JA</p></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">In preparation</span><span class="title">Baseline immune tone and early innate activation predict long-term antibody responses to adjuvanted vaccines in <i>Ovis aries</i></span><p><b>Botos-Rogozsan MA</b>, Mitrovic J, Brito F, Mohn U, Neulen ML, Summerfield A</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2026 · Viruses</span><a href="https://doi.org/10.3390/v18101142">Computational analysis of immunohistochemistry enables quantitative assessment of SARS-CoV-2 nucleocapsid immunolabeling in experimentally infected mice</a><p>Kozarac N*, <b>Botos M*</b>, Burgener L*, de Brot S, … Benarafa C, Grau-Roma L</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2026 · Discovery Immunology</span><a href="https://doi.org/10.1093/discim/kyag012">Dendritic-cell diversity in equine blood revealed by single-cell transcriptomics</a><p>Baillou A, <b>Botos M</b>, Oberhaensli S, Cvitas I, … Marti E, Talker SC</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2025 · Frontiers in Immunology</span><a href="https://doi.org/10.3389/fimmu.2025.1639553">Unraveling porcine dendritic-cell diversity: welcome tDC and DC3</a><p>Baillou A, Auray G, Brito F, <b>Botos M</b>, Huber A, Summerfield A, Talker SC</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2023 · Scientific Reports</span><a href="https://doi.org/10.1038/s41598-023-32272-6">Transcriptomic data meta-analysis reveals common and injury model specific gene expression changes in the regenerating zebrafish heart</a><p><b>Botos MA</b>, Arora P, Chouvardas P, Mercader N</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2020 · EMBO Reports</span><a href="https://doi.org/10.15252/embr.202050287">Scaf1 promotes respiratory supercomplexes and metabolic efficiency in zebrafish</a><p>García-Poyatos C, Cogliati S, Calvo E, … <b>Botos M</b>, … Mercader N, Enríquez JA</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2019 · Cell Reports</span><a href="https://doi.org/10.1016/j.celrep.2019.09.041">Adult sox10⁺ cardiomyocytes contribute to myocardial regeneration in the zebrafish</a><p>Sande-Melón M, Marques IJ, … <b>Botos MA</b>, … Mercader N</p></div></li>
+    <li><span class="paper" aria-hidden="true"></span><div><span class="when">2019 · Cell Reports</span><a href="https://doi.org/10.1016/j.celrep.2019.06.091">Wilms tumor 1b expression defines a pro-regenerative macrophage subtype and is required for organ regeneration in the zebrafish</a><p>Sanz-Morejón A, García-Redondo AB, … <b>Botos MA</b>, … Mercader N</p></div></li>
   </ol>
 </section>
 
@@ -326,23 +392,42 @@
     <h2>Let's <em>talk</em></h2>
     <p class="muted">From summer 2027 I'm ready for a new position, in industry, academia or elsewhere, anywhere I can keep applying my skills and working with biological data: bioinformatics, single-cell and genomics, machine learning for biology.</p>
   </div>
-  <div class="contact-grid">
-    <div class="ripstop panel contact-card">
-      <span class="label">Email</span>
-      <a href="mailto:marius.botos@unibe.ch">marius.botos@unibe.ch</a>
-      <a href="mailto:emariusb@gmail.com">emariusb@gmail.com</a>
+
+  <div class="contact">
+    <div class="c-block">
+      <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg></span>
+      <div>
+        <span class="label">Mail</span>
+        <a href="mailto:emariusb@gmail.com">emariusb@gmail.com</a>
+        <a href="mailto:marius.botos@unibe.ch">marius.botos@unibe.ch</a>
+      </div>
     </div>
-    <div class="ripstop panel contact-card">
-      <span class="label">Office</span>
-      <p>Institute of Virology and Immunology<br>Vetsuisse Faculty, University of Bern<br>Länggassstrasse 120, 3012 Bern</p>
+    <div class="c-block">
+      <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <div>
+        <span class="label">Office</span>
+        <p>IVI &amp; Vetsuisse Faculty, University of Bern<br>Länggassstrasse 120, 3012 Bern</p>
+        <a class="small" href="https://www.openstreetmap.org/?mlat=46.95229&amp;mlon=7.42657#map=17/46.95229/7.42657">Open in maps →</a>
+      </div>
     </div>
-    <div class="ripstop panel contact-card">
-      <span class="label">Elsewhere</span>
-      <a href="https://github.com/Sporgelum">github.com/Sporgelum</a>
-      <a href="https://www.linkedin.com/in/mabotos22">linkedin.com/in/mabotos22</a>
-      <a href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Google Scholar</a>
+    <div class="c-block">
+      <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span>
+      <div>
+        <span class="label">Online</span>
+        <div class="socials">
+          <a href="https://github.com/Sporgelum" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>GitHub</a>
+          <a href="https://www.linkedin.com/in/mabotos22" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3 9h3v12H3zM9 9h2.9v1.7c.4-.8 1.4-1.9 3.3-1.9 3.1 0 3.8 2 3.8 4.7V21h-3v-6.6c0-1.6 0-3.1-1.9-3.1s-2.2 1.4-2.2 3V21H9z" fill="currentColor" stroke="none"/></svg>LinkedIn</a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 3 1.5 10 12 17l8-5.3V17h2v-7Z" fill="currentColor" stroke="none"/><path d="M6 13.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-3.5"/></svg>Scholar</a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="map-wrap">
+    <iframe title="Map: Länggassstrasse 120, Bern" loading="lazy" referrerpolicy="no-referrer"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=7.4205%2C46.9497%2C7.4327%2C46.9549&amp;layer=mapnik&amp;marker=46.95229%2C7.42657"></iframe>
+  </div>
+
   <div class="photo-strip">
     <img src="img/glider-sky.jpg" alt="Paragliding above alpine cliffs" loading="lazy">
     <img src="img/glider-alps.jpg" alt="Paraglider over the Interlaken valley with the Bernese Alps behind" loading="lazy">
