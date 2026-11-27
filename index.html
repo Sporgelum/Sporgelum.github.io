@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marius Botos · Bioinformatics</title>
+<meta name="description" content="Marius A. Botos Rogozsan: bioinformatician working on single-cell omics, genomics and comparative immunology. Open to new positions from July to September 2027.">
+<meta property="og:title" content="Marius Botos · Bioinformatics">
+<meta property="og:description" content="Single-cell omics, genomics, comparative immunology. Open to new positions from July 2027.">
+<meta property="og:image" content="https://sporgelum.github.io/img/portrait.jpg">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site/site.css">
+</head>
+<body>
+
+<canvas id="comb" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#home" data-tab="home">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2.5 20.5 7.25v9.5L12 21.5 3.5 16.75v-9.5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8.2 15.3 10v4L12 15.8 8.7 14v-4Z" fill="currentColor"/></svg>
+    <span>M. Botos</span>
+  </a>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <a href="#home" data-tab="home" role="tab">Brain</a>
+    <a href="#cv" data-tab="cv" role="tab">CV</a>
+    <a href="#projects" data-tab="projects" role="tab">Projects</a>
+    <a href="#future" data-tab="future" role="tab">Future</a>
+    <a href="#publications" data-tab="publications" role="tab">Publications</a>
+    <a href="#contact" data-tab="contact" role="tab">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HOME / SECOND BRAIN ============ -->
+<section class="tab" id="tab-home" data-tab-panel="home">
+  <div class="hero">
+    <a class="news" href="#contact" data-tab="contact">
+      <span class="news-dot"></span>
+      <span class="news-label">News</span>
+      <span>Open to new positions starting <b>July to September 2027</b></span>
+      <span class="news-arrow" aria-hidden="true">→</span>
+    </a>
+    <h1 class="title">Marius <em>Botos</em></h1>
+    <p class="lede">Molecular biologist turned bioinformatician. I read cells one at a time, across species, and build tools that turn genomes into something people can explore.</p>
+  </div>
+
+  <div class="brain-wrap ripstop">
+    <div class="brain-head">
+      <span class="label">Second brain</span>
+      <span class="hint">Drag the cells. Click one to open it.</span>
+    </div>
+    <svg id="brain" role="img" aria-label="Interactive map of topics. Each node opens a section of the site."></svg>
+    <ul class="brain-fallback">
+      <li><a href="#cv" data-tab="cv">CV</a></li>
+      <li><a href="#projects" data-tab="projects">Projects done</a></li>
+      <li><a href="#future" data-tab="future">Future projects</a></li>
+      <li><a href="#publications" data-tab="publications">Publications</a></li>
+      <li><a href="#contact" data-tab="contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="interests">
+    <span class="label">Where my interests overlap</span>
+    <p>Biology · Immunology · Genomics · Statistics · Machine learning · Protein language models · Metabolism &amp; nutrition · Paragliding and the outdoors</p>
+  </div>
+</section>
+
+<!-- ============ CV ============ -->
+<section class="tab" id="tab-cv" data-tab-panel="cv" hidden>
+  <div class="page-head">
+    <span class="label">Curriculum vitae</span>
+    <h2>From the bench to the <em>cluster</em></h2>
+  </div>
+
+  <div class="cv-grid">
+    <aside class="cv-card ripstop panel">
+      <img class="portrait" src="img/portrait.jpg" alt="Portrait of Marius Botos" width="320" height="426">
+      <h3>Marius Alexandru Botos Rogozsan</h3>
+      <p class="muted">MSc Bioinformatics · MSc Biotechnology</p>
+      <p class="muted">Bern · Lausanne · Madrid</p>
+      <div class="chips">
+        <a class="chip" href="https://github.com/Sporgelum">GitHub</a>
+        <a class="chip" href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Scholar</a>
+        <a class="chip" href="https://www.linkedin.com/in/mabotos22">LinkedIn</a>
+      </div>
+      <div class="avail">
+        <span class="news-dot"></span> Available from July to September 2027
+      </div>
+    </aside>
+
+    <div class="cv-main">
+      <h3 class="cv-section">Experience</h3>
+      <ol class="timeline">
+        <li>
+          <span class="when">Now</span>
+          <div>
+            <h4>Bioinformatician, Institute of Virology and Immunology (IVI)</h4>
+            <p class="where">Vetsuisse Faculty, University of Bern</p>
+            <p>Mapping the mononuclear phagocyte system at single-cell resolution across non-model domestic species (bovine, equine, porcine, canine) alongside human and mouse.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2022 – 2023</span>
+          <div>
+            <h4>Bioinformatician Research Assistant, EPFL</h4>
+            <p class="where">Lausanne, Switzerland</p>
+            <p>Human and mouse single-cell omics and <i>Drosophila</i> genomics. Integration of sc/snRNA-seq atlases of adipose tissue and paired multiome analysis.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2018 – 2022</span>
+          <div>
+            <h4>Bioinformatician Assistant, Institute of Anatomy</h4>
+            <p class="where">University of Bern, Switzerland</p>
+            <p>Bulk and small RNA-seq of zebrafish heart regeneration, meta-analysis of injury models and interactive Shiny apps for the lab.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2018</span>
+          <div>
+            <h4>Intern, Instituto de Investigación Sanitaria Fundación Jiménez Díaz</h4>
+            <p class="where">Madrid, Spain</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2017</span>
+          <div>
+            <h4>Intern, InnoHealth Group</h4>
+            <p class="where">Madrid, Spain</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="cv-section">Education</h3>
+      <div class="edu">
+        <div class="edu-item ripstop panel"><span class="when">2018 – 2019</span><h4>CAS Data Science &amp; Machine Learning</h4><p>University of Bern</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2017 – 2018</span><h4>MSc Bioinformatics</h4><p>Instituto de Salud Carlos III, Madrid</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2016 – 2017</span><h4>MSc Biotechnology</h4><p>Universidad Autónoma de Madrid</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2015 – 2016</span><h4>BSc Biological Sciences</h4><p>University of Hertfordshire, UK</p></div>
+        <div class="edu-item ripstop panel"><span class="when">2012 – 2016</span><h4>BSc Biology</h4><p>Universidad de Alcalá de Henares</p></div>
+      </div>
+
+      <h3 class="cv-section">Toolbox</h3>
+      <div class="skills">
+        <div><span class="label">Languages</span><p>Python · R · Bash</p></div>
+        <div><span class="label">Single-cell &amp; omics</span><p>Scanpy · scVI / scANVI / MultiVI · Seurat · CellRanger · CellTypist · Census · decoupleR</p></div>
+        <div><span class="label">Sequencing</span><p>FastQC · MultiQC · Cutadapt · STAR · BWA · Samtools · MACS2 · variant calling</p></div>
+        <div><span class="label">Analysis</span><p>scikit-learn · PyMDE · UMAP · clusterProfiler · GSEA · GO / KEGG · Cytoscape</p></div>
+        <div><span class="label">Infrastructure</span><p>Linux · SLURM clusters · VS Code · RStudio / Posit · Jupyter</p></div>
+        <div><span class="label">Apps &amp; design</span><p>R Shiny · Adobe Suite</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS DONE ============ -->
+<section class="tab" id="tab-projects" data-tab-panel="projects" hidden>
+  <div class="page-head">
+    <span class="label">Projects done</span>
+    <h2>Data in, <em>biology</em> out</h2>
+    <p class="muted">From raw FASTQ to figures: gathering, cleaning, integrating and explaining transcriptomic data across species.</p>
+  </div>
+
+  <div class="cards">
+    <article class="card ripstop panel" id="p-zebrafish">
+      <span class="tag">RNA-seq · Zebrafish</span>
+      <h3>Heart regeneration meta-analysis</h3>
+      <p>Workflow comparing public RNA-seq from zebrafish heart injury models to find shared and model-specific regeneration programmes, interpreted with GO-based integrated networks. Published in <i>Scientific Reports</i> (2023).</p>
+      <a class="more" href="https://github.com/MercaderLabAnatomy/PUB_Botos_et_al_2022">Code on GitHub →</a>
+    </article>
+    <article class="card ripstop panel" id="p-smallrna">
+      <span class="tag">Small RNA-seq</span>
+      <h3>Small RNA species pipeline</h3>
+      <p>Pipeline capturing miRNA, piRNA, tRNA, rRNA and other annotated species from Ensembl, NCBI and more, so new RNA classes plug into the same workflow.</p>
+    </article>
+    <article class="card ripstop panel" id="p-variants">
+      <span class="tag">Variant calling</span>
+      <h3>Metabolic haplotypes from RNA-seq</h3>
+      <p>Variant calling on zebrafish RNA-seq to explore energy-supply genes and mitochondrial variants behind metabolic disturbances.</p>
+    </article>
+    <article class="card ripstop panel" id="p-adipose">
+      <span class="tag">sc / snRNA-seq · Human &amp; mouse</span>
+      <h3>Adipose tissue atlas integration</h3>
+      <p>Integrated single-cell and single-nuclei data from omental and subcutaneous fat (SVF and whole tissue) with neural-network embeddings, tuned with UMAP, PyMDE, PCA and clustering.</p>
+    </article>
+    <article class="card ripstop panel" id="p-deconv">
+      <span class="tag">Deconvolution</span>
+      <h3>Cell types in obesity &amp; diabetes cohorts</h3>
+      <p>Used the adipose atlas as a reference to deconvolve bulk RNA-seq cohorts and test whether disease tracks shifts in cell-type composition.</p>
+    </article>
+    <article class="card ripstop panel" id="p-multiome">
+      <span class="tag">Multiome · MultiVI</span>
+      <h3>Paired RNA + ATAC of adipose precursors</h3>
+      <p>Linked gene expression to chromatin accessibility in a mouse precursor population, re-calling peaks per cluster with MACS2 and integrating with MultiVI.</p>
+    </article>
+    <article class="card ripstop panel" id="p-mps">
+      <span class="tag">Immunology · 6 species</span>
+      <h3>Cross-species phagocyte atlas</h3>
+      <p>End-to-end workflow, from reference genome building to integration, comparing the mononuclear phagocyte system in blood, PBMC and lymph node of cow, horse, pig, dog, human and mouse.</p>
+    </article>
+    <article class="card ripstop panel" id="p-shiny">
+      <span class="tag">Web apps</span>
+      <h3>Interactive Shiny dashboards</h3>
+      <p>Secure, customisable R Shiny apps for exploring and downloading results.</p>
+      <a class="more" href="https://mybinder.org/v2/gh/MercaderLabAnatomy/PUB_Botos_et_al_2022_shinyapp_binder/HEAD?urlpath=shiny/bus-dashboard/">Live example →</a>
+    </article>
+    <article class="card ripstop panel" id="p-hpc">
+      <span class="tag">HPC</span>
+      <h3>Cluster computing setup</h3>
+      <p>SLURM-managed Linux clusters driven interactively from VS Code and RStudio, running everything from QC to custom visualisation.</p>
+    </article>
+    <article class="card ripstop panel" id="p-fun">
+      <span class="tag">For fun</span>
+      <h3>Face emotion recognition</h3>
+      <p>A small deep-learning project to set up and stress-test local GPU, SSD and RAM resources.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FUTURE PROJECTS ============ -->
+<section class="tab" id="tab-future" data-tab-panel="future" hidden>
+  <div class="page-head">
+    <span class="label">Future projects</span>
+    <h2>What I'm <em>building next</em></h2>
+  </div>
+
+  <div class="future">
+    <article class="feature ripstop panel" id="f-thermal">
+      <div class="feature-text">
+        <span class="tag">Paragliding · Maps · Weather</span>
+        <h3>Thermal Honey</h3>
+        <p>A map, database and forecasting tool for paragliding flights in Switzerland. Weather models and public data are combined to predict a <b>thermal factor square by square</b> across the terrain.</p>
+        <p>The idea behind the model: picture the land covered by a layer of honey. Where the warm layer gathers and drips upward is where thermals release. Each cell is scored on slope aspect (N, E, S, W), sun exposure through the day, ground cover, cloud cover and wind, and the result is simulated as a fluid.</p>
+        <ul class="ticks">
+          <li>Grid map of thermal probability per cell</li>
+          <li>Flight database and route guidance</li>
+          <li>Weather and cloud forecast layers</li>
+        </ul>
+      </div>
+      <figure class="feature-art" aria-label="Illustration: terrain grid with a honey layer pooling into thermals under cumulus clouds">
+        <svg id="thermal-art" viewBox="0 0 520 380"></svg>
+        <figcaption>Concept sketch: sunny south faces warm up, the honey layer pools and lifts off as thermals.</figcaption>
+      </figure>
+    </article>
+
+    <article class="feature ripstop panel" id="f-genome">
+      <div class="feature-text">
+        <span class="tag">Research · Genomics · ML</span>
+        <h3>Genome Variant Atlas</h3>
+        <p>A web app to read about genome variants, learn how to analyse your own genome, and see the risks when several variants occur together.</p>
+        <ul class="ticks">
+          <li><b>Universal genome embedding</b>, in the spirit of universal scRNA-seq embeddings, so any genome can be placed in one shared space</li>
+          <li><b>Protein language model embeddings</b> to show how a mutation moves a protein, and what that may change</li>
+          <li>Exploration in the style of cellxgene, extended for variants, genes and proteins</li>
+        </ul>
+      </div>
+      <figure class="feature-art">
+        <svg id="genome-art" viewBox="0 0 520 380" aria-label="Illustration: embedding space with a reference protein and a mutated protein shifted away from it"></svg>
+      </figure>
+    </article>
+
+    <article class="feature ripstop panel" id="f-disease">
+      <div class="feature-text">
+        <span class="tag">Research · Disease profiles</span>
+        <h3>Disease Profile Embeddings</h3>
+        <p>Follows on from the Variant Atlas. Profiles for cancer, tumour-free, relapse, obesity and other conditions are embedded in one space, so you can compare your own profile with them if you have one.</p>
+      </div>
+      <div class="disease-chips">
+        <span>Cancer</span><span>Tumour-free</span><span>Relapse</span><span>Obesity</span><span>Metabolic</span><span>+ more</span>
+      </div>
+    </article>
+
+    <article class="feature ripstop panel small" id="f-papagalul">
+      <div class="feature-text">
+        <span class="tag">Coming soon</span>
+        <h3>Papagalul</h3>
+        <p>Details coming soon.</p>
+      </div>
+    </article>
+
+    <div class="more-soon">More will come…</div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section class="tab" id="tab-publications" data-tab-panel="publications" hidden>
+  <div class="page-head">
+    <span class="label">Publications</span>
+    <h2>In <em>print</em></h2>
+    <p class="muted">Full list on <a href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Google Scholar</a>.</p>
+  </div>
+  <ol class="pubs">
+    <li class="ripstop panel"><span class="when">2023 · Scientific Reports</span><a href="https://doi.org/10.1038/s41598-023-32272-6">Transcriptomic data meta-analysis reveals common and injury model specific gene expression changes in the regenerating zebrafish heart</a><p><b>Botos MA</b>, Arora P, Chouvardas P, Mercader N</p></li>
+    <li class="ripstop panel"><span class="when">2020 · EMBO Reports</span><a href="https://doi.org/10.15252/embr.202050287">Scaf1 promotes respiratory supercomplexes and metabolic efficiency in zebrafish</a><p>García-Poyatos C, Cogliati S, Calvo E, … <b>Botos M</b>, … Mercader N, Enríquez JA</p></li>
+    <li class="ripstop panel"><span class="when">2019 · Cell Reports</span><a href="https://doi.org/10.1016/j.celrep.2019.09.041">Adult sox10+ cardiomyocytes contribute to myocardial regeneration in the zebrafish</a><p>Sande-Melon M, Marques IJ, … <b>Botos MA</b>, … Mercader N</p></li>
+    <li class="ripstop panel"><span class="when">2019 · Cell Reports</span><a href="https://doi.org/10.1016/j.celrep.2019.06.091">Wilms tumor 1b expression defines a pro-regenerative macrophage subtype and is required for organ regeneration in the zebrafish</a><p>Sanz-Morejón A, García-Redondo AB, … <b>Botos MA</b>, … Mercader N</p></li>
+    <li class="ripstop panel"><span class="when">2019 · bioRxiv</span><a href="https://doi.org/10.1101/662536">Pre-existent adult sox10+ cardiomyocytes contribute to myocardial regeneration in the zebrafish</a><p>Sande-Melón M, … <b>Botos M</b>, … Mercader N</p></li>
+    <li class="ripstop panel"><span class="when">2019 · bioRxiv</span><a href="https://doi.org/10.1101/818286">Respiratory supercomplexes provide metabolic efficiency in zebrafish</a><p>García-Poyatos C, … <b>Botos M</b>, … Enríquez JA</p></li>
+  </ol>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="tab" id="tab-contact" data-tab-panel="contact" hidden>
+  <div class="page-head">
+    <span class="label">Contact</span>
+    <h2>Let's <em>talk</em></h2>
+    <p class="muted">I'm looking for my next role starting July to September 2027. Bioinformatics, single-cell and genomics, ML for biology.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="ripstop panel contact-card">
+      <span class="label">Email</span>
+      <a href="mailto:marius.botos@unibe.ch">marius.botos@unibe.ch</a>
+      <a href="mailto:emariusb@gmail.com">emariusb@gmail.com</a>
+    </div>
+    <div class="ripstop panel contact-card">
+      <span class="label">Office</span>
+      <p>Institute of Virology and Immunology<br>Vetsuisse Faculty, University of Bern<br>Länggassstrasse 120, 3012 Bern</p>
+    </div>
+    <div class="ripstop panel contact-card">
+      <span class="label">Elsewhere</span>
+      <a href="https://github.com/Sporgelum">github.com/Sporgelum</a>
+      <a href="https://www.linkedin.com/in/mabotos22">linkedin.com/in/mabotos22</a>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=jz6y5zgAAAAJ">Google Scholar</a>
+    </div>
+  </div>
+  <div class="photo-strip">
+    <img src="img/glider-sky.jpg" alt="Paragliding above alpine cliffs" loading="lazy">
+    <img src="img/glider-alps.jpg" alt="Paraglider over the Interlaken valley with the Bernese Alps behind" loading="lazy">
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 Marius Botos</span>
+  <span class="muted">Honeycomb and ripstop textures drawn in code.</span>
+</footer>
+
+<script src="assets/site/honeycomb.js"></script>
+<script src="assets/site/brain.js"></script>
+<script src="assets/site/art.js"></script>
+<script src="assets/site/app.js"></script>
+</body>
+</html>
