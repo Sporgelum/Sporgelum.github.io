@@ -37,24 +37,31 @@
 <main>
 
 <!-- ============ HOME / SECOND BRAIN ============ -->
-<section class="tab" id="tab-home" data-tab-panel="home">
-  <div class="hero">
-    <a class="news" href="#contact" data-tab="contact">
-      <span class="news-dot"></span>
-      <span class="news-label">News</span>
-      <span>Open to new positions starting <b>July to September 2027</b></span>
-      <span class="news-arrow" aria-hidden="true">→</span>
+<section class="tab home" id="tab-home" data-tab-panel="home">
+  <div class="screen hero-screen">
+    <div class="hero">
+      <a class="news" href="#contact" data-tab="contact">
+        <span class="news-dot"></span>
+        <span class="news-label">News</span>
+        <span>Open to new positions starting <b>July to September 2027</b></span>
+        <span class="news-arrow" aria-hidden="true">→</span>
+      </a>
+      <h1 class="title">Marius <em>Botos</em></h1>
+      <p class="lede">Molecular biologist turned bioinformatician. I read cells one at a time, across species, and build tools that turn genomes into something people can explore.</p>
+      <p class="interests">Biology · Immunology · Genomics · Statistics · Machine learning · Protein language models · Metabolism &amp; nutrition · Paragliding</p>
+    </div>
+    <a class="scroll-cue" href="#brain-screen" aria-label="Scroll to the second brain">
+      <span>Explore the second brain</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
     </a>
-    <h1 class="title">Marius <em>Botos</em></h1>
-    <p class="lede">Molecular biologist turned bioinformatician. I read cells one at a time, across species, and build tools that turn genomes into something people can explore.</p>
   </div>
 
-  <div class="brain-wrap ripstop">
+  <div class="screen brain-screen reveal" id="brain-screen">
     <div class="brain-head">
       <span class="label">Second brain</span>
-      <span class="hint">Drag the cells. Click one to open it.</span>
+      <h2>Spin the <em>ball</em>. Open a cell.</h2>
     </div>
-    <svg id="brain" role="img" aria-label="Interactive map of topics. Each node opens a section of the site."></svg>
+    <svg id="brain" role="img" aria-label="Rotatable ball of topics. Drag or use the arrow keys to spin it; each cell opens a section of the site."></svg>
     <ul class="brain-fallback">
       <li><a href="#cv" data-tab="cv">CV</a></li>
       <li><a href="#projects" data-tab="projects">Projects done</a></li>
@@ -62,11 +69,6 @@
       <li><a href="#publications" data-tab="publications">Publications</a></li>
       <li><a href="#contact" data-tab="contact">Contact</a></li>
     </ul>
-  </div>
-
-  <div class="interests">
-    <span class="label">Where my interests overlap</span>
-    <p>Biology · Immunology · Genomics · Statistics · Machine learning · Protein language models · Metabolism &amp; nutrition · Paragliding and the outdoors</p>
   </div>
 </section>
 
