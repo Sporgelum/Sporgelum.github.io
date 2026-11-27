@@ -358,3 +358,23 @@ main { padding: 0 clamp(16px, 4vw, 48px); max-width: 1240px; margin: 0 auto; }
   .node.leaf text { font-size: 11px; }
 }
 .screen { scroll-margin-top: 66px; } @media (max-width: 640px) { .screen { scroll-margin-top: 104px; } }
+
+/* brain screen: plain dark sky, no honeycomb, so the ball is the focus */
+.brain-screen {
+  isolation: isolate;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: clamp(16px, 4vw, 48px);
+  padding-right: clamp(16px, 4vw, 48px);
+}
+.brain-screen::before {
+  content: ""; position: absolute; inset: 0; z-index: -2;
+  background: #141311; /* flat, warm near-black: calm, nothing competing with the ball */
+}
+.brain-screen::after { /* soft fade from the honeycomb hero into the dark */
+  content: ""; position: absolute; left: 0; right: 0; top: -120px; height: 120px; z-index: -2;
+  background: linear-gradient(to bottom, rgba(20,19,17,0), #141311);
+  pointer-events: none;
+}
+.bee-sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.brain-screen .ball { stroke: rgba(255,207,90,.3); }
