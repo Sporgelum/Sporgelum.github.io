@@ -38,6 +38,15 @@
     e.preventDefault();
     window.siteGo(a.dataset.tab);
   });
+  // fade the brain screen in as it scrolls into view
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.2 });
+    reveals.forEach((r) => io.observe(r));
+  } else reveals.forEach((r) => r.classList.add('in'));
+  const cue = document.querySelector('.scroll-cue');
+  if (cue) cue.addEventListener('click', (e) => { e.preventDefault(); document.getElementById('brain-screen').scrollIntoView({ behavior: 'smooth' }); });
+
   window.addEventListener('hashchange', fromHash);
   fromHash();
 })();

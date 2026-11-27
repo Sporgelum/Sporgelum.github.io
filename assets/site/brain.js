@@ -1,5 +1,6 @@
-/* "Second brain": a small force-directed graph of honeycomb cells.
-   Hubs open a tab; leaves open a tab and jump to an item inside it. */
+/* "Second brain": a rotatable 3D ball of honeycomb cells.
+   Marius sits in the centre, sections sit on an inner shell, topics on the outer shell.
+   Drag to spin the ball; click a cell to open its tab (leaves jump to the item). */
 (function () {
   const svg = document.getElementById('brain');
   if (!svg) return;
@@ -45,16 +46,37 @@
   const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
   const links = [];
   nodes.forEach((n) => {
-    if (n.type === 'hub') links.push({ s: 'me', t: n.id, len: 210, k: 0.02 });
-    if (n.parent) links.push({ s: n.parent, t: n.id, len: 92, k: 0.045 });
+    if (n.type === 'hub') links.push({ a: byId.me, b: n });
+    if (n.parent) links.push({ a: byId[n.parent], b: n });
   });
-  cross.forEach(([s, t]) => links.push({ s, t, len: 260, k: 0.0015, weak: true }));
-  links.forEach((l) => { l.a = byId[l.s]; l.b = byId[l.t]; });
+  cross.forEach(([s, t]) => links.push({ a: byId[s], b: byId[t], weak: true }));
 
-  const narrow = () => window.innerWidth < 640;
-  let NARROW = narrow();
-  const radius = (n) => (n.type === 'core' ? (NARROW ? 36 : 46) : n.type === 'hub' ? (NARROW ? 22 : 30) : (NARROW ? 7 : 9));
+  // ---------- 3D placement ----------
+  const norm = (v) => { const l = Math.hypot(v[0], v[1], v[2]) || 1; return [v[0] / l, v[1] / l, v[2] / l]; };
+  const cross3 = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+  const hubs = nodes.filter((n) => n.type === 'hub');
+  // spread hub directions evenly (Fibonacci sphere)
+  hubs.forEach((h, i) => {
+    const y = 1 - (2 * (i + 0.5)) / hubs.length;
+    const r = Math.sqrt(1 - y * y);
+    const th = i * Math.PI * (3 - Math.sqrt(5)) + 0.6;
+    h.dir = [Math.cos(th) * r, y * 0.9, Math.sin(th) * r];
+    h.p = h.dir.map((v) => v * 0.52);
+  });
+  byId.me.p = [0, 0, 0];
+  // leaves fan out around their hub on the outer shell
+  hubs.forEach((h) => {
+    const kids = nodes.filter((n) => n.parent === h.id);
+    const up = Math.abs(h.dir[1]) > 0.9 ? [1, 0, 0] : [0, 1, 0];
+    const t1 = norm(cross3(h.dir, up)), t2 = cross3(h.dir, t1);
+    kids.forEach((k, i) => {
+      const a = (i / kids.length) * Math.PI * 2 + 0.4;
+      const spread = 0.62;
+      k.p = norm([0, 1, 2].map((j) => h.dir[j] + spread * (Math.cos(a) * t1[j] + Math.sin(a) * t2[j])));
+    });
+  });
 
+  // ---------- SVG scaffolding ----------
   function hex(r) {
     let d = '';
     for (let i = 0; i < 6; i++) {
@@ -63,8 +85,6 @@
     }
     return d + 'Z';
   }
-
-  // defs: honey gradients
   const defs = document.createElementNS(NS, 'defs');
   defs.innerHTML = `
     <radialGradient id="g-core" cx="35%" cy="30%" r="80%">
@@ -74,13 +94,37 @@
       <stop offset="0" stop-color="#f7c45a"/><stop offset=".55" stop-color="#b8650c"/><stop offset="1" stop-color="#4a2405"/>
     </radialGradient>
     <radialGradient id="g-leaf" cx="35%" cy="30%" r="85%">
-      <stop offset="0" stop-color="#7d6a45"/><stop offset="1" stop-color="#2f2617"/>
+      <stop offset="0" stop-color="#9a8456"/><stop offset="1" stop-color="#3a2e1b"/>
+    </radialGradient>
+    <radialGradient id="g-ball" cx="38%" cy="32%" r="70%">
+      <stop offset="0" stop-color="rgba(255,200,90,.16)"/>
+      <stop offset=".55" stop-color="rgba(242,165,22,.06)"/>
+      <stop offset=".92" stop-color="rgba(120,60,8,.10)"/>
+      <stop offset="1" stop-color="rgba(255,190,80,.28)"/>
     </radialGradient>`;
   svg.appendChild(defs);
-
+  const ball = document.createElementNS(NS, 'circle');
+  ball.setAttribute('class', 'ball');
+  ball.setAttribute('fill', 'url(#g-ball)');
+  const gRings = document.createElementNS(NS, 'g');
+  gRings.setAttribute('class', 'rings');
   const gEdges = document.createElementNS(NS, 'g');
   const gNodes = document.createElementNS(NS, 'g');
-  svg.append(gEdges, gNodes);
+  svg.append(ball, gRings, gEdges, gNodes);
+
+  // orbit rings: equator + two meridians, drawn on the outer shell
+  const rings = [];
+  for (let k = 0; k < 3; k++) {
+    const pts = [];
+    for (let i = 0; i <= 72; i++) {
+      const a = (i / 72) * Math.PI * 2;
+      const c = Math.cos(a), s = Math.sin(a);
+      pts.push(k === 0 ? [c, 0, s] : k === 1 ? [c, s, 0] : [0, s, c]);
+    }
+    const el = document.createElementNS(NS, 'path');
+    gRings.appendChild(el);
+    rings.push({ pts, el });
+  }
 
   links.forEach((l) => {
     l.el = document.createElementNS(NS, 'line');
@@ -88,154 +132,124 @@
     gEdges.appendChild(l.el);
   });
 
+  const baseR = (n) => (n.type === 'core' ? 40 : n.type === 'hub' ? 26 : 9);
   nodes.forEach((n) => {
     const g = document.createElementNS(NS, 'g');
     g.setAttribute('class', 'node ' + (n.type || 'leaf'));
     g.setAttribute('tabindex', '0');
     g.setAttribute('role', 'link');
     g.setAttribute('aria-label', 'Open ' + n.label);
-    const r = radius(n);
+    const r = baseR(n);
+    const inner = document.createElementNS(NS, 'g');
+    inner.setAttribute('class', 'cell-wrap');
     const p = document.createElementNS(NS, 'path');
     p.setAttribute('d', hex(r));
     p.setAttribute('class', 'cell');
     p.setAttribute('fill', n.type === 'core' ? 'url(#g-core)' : n.type === 'hub' ? 'url(#g-hub)' : n.news ? '#ffcf5a' : 'url(#g-leaf)');
-    p.setAttribute('stroke', n.type ? 'rgba(255,230,170,.55)' : 'rgba(243,234,216,.35)');
+    p.setAttribute('stroke', n.type ? 'rgba(255,230,170,.6)' : 'rgba(243,234,216,.4)');
     p.setAttribute('stroke-width', n.type ? 1.5 : 1);
-    g.appendChild(p);
+    inner.appendChild(p);
     if (n.type) {
-      const inner = document.createElementNS(NS, 'path');
-      inner.setAttribute('d', hex(r - 6));
-      inner.setAttribute('fill', 'none');
-      inner.setAttribute('stroke', 'rgba(255,240,200,.28)');
-      inner.setAttribute('stroke-dasharray', '2 3');
-      inner.setAttribute('pointer-events', 'none');
-      g.appendChild(inner);
+      const ring = document.createElementNS(NS, 'path');
+      ring.setAttribute('d', hex(r - 6));
+      ring.setAttribute('fill', 'none');
+      ring.setAttribute('stroke', 'rgba(255,240,200,.3)');
+      ring.setAttribute('stroke-dasharray', '2 3');
+      ring.setAttribute('pointer-events', 'none');
+      inner.appendChild(ring);
     }
+    g.appendChild(inner);
     const t = document.createElementNS(NS, 'text');
     t.textContent = n.label;
-    if (n.type) {
-      t.setAttribute('text-anchor', 'middle');
-      t.setAttribute('y', r + 20);
-      if (n.type === 'core') { t.setAttribute('font-size', '17'); t.setAttribute('font-weight', '800'); t.setAttribute('y', 6); t.setAttribute('class', 'core-label'); }
-    } else {
-      t.setAttribute('x', 14);
-      t.setAttribute('y', 4);
-    }
+    if (n.type === 'core') { t.setAttribute('text-anchor', 'middle'); t.setAttribute('y', 6); t.setAttribute('class', 'core-label'); }
+    else if (n.type === 'hub') { t.setAttribute('text-anchor', 'middle'); t.setAttribute('y', r + 20); }
+    else { t.setAttribute('x', 14); t.setAttribute('y', 4); }
     g.appendChild(t);
     gNodes.appendChild(g);
-    n.el = g; n.text = t;
-    n.vx = 0; n.vy = 0;
+    n.el = g; n.inner = inner; n.text = t;
   });
 
-  // --- layout ---
-  let W = 800, H = 560;
+  // ---------- rotation state ----------
+  // M is a 3x3 rotation matrix (row-major). Drag applies small rotations about screen axes.
+  let M = [1, 0, 0, 0, 1, 0, 0, 0, 1];
+  function rotate(ax, ay) { // ax: about screen x-axis, ay: about screen y-axis
+    const cx = Math.cos(ax), sx = Math.sin(ax), cy = Math.cos(ay), sy = Math.sin(ay);
+    const Rx = [1, 0, 0, 0, cx, -sx, 0, sx, cx];
+    const Ry = [cy, 0, sy, 0, 1, 0, -sy, 0, cy];
+    M = mul(Ry, mul(Rx, M));
+  }
+  function mul(A, B) {
+    const C = new Array(9);
+    for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++)
+      C[i * 3 + j] = A[i * 3] * B[j] + A[i * 3 + 1] * B[3 + j] + A[i * 3 + 2] * B[6 + j];
+    return C;
+  }
+  rotate(-0.35, 0.5); // a pleasant starting tilt
+
+  let W = 800, H = 600, R = 240, cx = 400, cy = 300;
   function size() {
     const b = svg.getBoundingClientRect();
-    W = Math.max(320, b.width); H = Math.max(380, b.height);
+    if (!b.width) return;
+    W = b.width; H = b.height;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    R = Math.min(W * (W < 640 ? 0.4 : 0.3), H * 0.4);
+    cx = W / 2; cy = H / 2;
+    ball.setAttribute('cx', cx); ball.setAttribute('cy', cy); ball.setAttribute('r', R * 1.08);
   }
-  size();
-  const hubs = nodes.filter((n) => n.type === 'hub');
-  nodes.forEach((n) => {
-    if (n.type === 'core') { n.x = W / 2; n.y = H / 2; return; }
-    if (n.type === 'hub') {
-      const i = hubs.indexOf(n);
-      const a = (i / hubs.length) * Math.PI * 2 - Math.PI / 2;
-      n.x = W / 2 + Math.cos(a) * W * 0.3;
-      n.y = H / 2 + Math.sin(a) * H * 0.32;
-      return;
-    }
-    // fan leaves out on the far side of their hub, so the layout is the same on every visit
-    const p = byId[n.parent];
-    const sib = nodes.filter((m) => m.parent === n.parent);
-    const k = sib.indexOf(n);
-    const out = Math.atan2(p.y - H / 2, p.x - W / 2);
-    const a = out + (k - (sib.length - 1) / 2) * 0.7;
-    n.x = p.x + Math.cos(a) * 80;
-    n.y = p.y + Math.sin(a) * 80;
-  });
+  const D = 3.2; // camera distance in sphere radii
+  function project(v) {
+    const x = M[0] * v[0] + M[1] * v[1] + M[2] * v[2];
+    const y = M[3] * v[0] + M[4] * v[1] + M[5] * v[2];
+    const z = M[6] * v[0] + M[7] * v[1] + M[8] * v[2];
+    const f = D / (D - z);
+    return { x: cx + x * R * f, y: cy - y * R * f, z, f };
+  }
 
-  let drag = null, alpha = 1;
-  function tick() {
-    const sc = Math.min(1.25, Math.max(0.62, W / 900));
-    // pairwise repulsion + hard collision (leaves reserve room for their label)
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const a = nodes[i], b = nodes[j];
-        let dx = b.x - a.x, dy = b.y - a.y;
-        const d = Math.hypot(dx, dy) || 0.01;
-        dx /= d; dy /= d;
-        let f = (2600 * sc) / (d * d);
-        const min = (radius(a) + radius(b)) + (a.type && b.type ? 70 : 34) * sc;
-        if (d < min) f += (min - d) * 0.12;
-        f = Math.min(f, 6);
-        a.vx -= dx * f; a.vy -= dy * f * 1.2;
-        b.vx += dx * f; b.vy += dy * f * 1.2;
-      }
-    }
-    // springs
-    links.forEach((l) => {
-      const dx = l.b.x - l.a.x, dy = l.b.y - l.a.y;
-      const d = Math.hypot(dx, dy) || 1;
-      const f = (d - l.len * (NARROW && !l.weak && l.a.type === 'core' ? 1.35 : sc)) * l.k;
-      l.a.vx += (dx / d) * f; l.a.vy += (dy / d) * f;
-      l.b.vx -= (dx / d) * f; l.b.vy -= (dy / d) * f;
-    });
-    // gravity (weaker sideways so the brain uses the width), integrate, keep inside
-    nodes.forEach((n) => {
-      n.vx += (W / 2 - n.x) * (NARROW ? 0.004 : 0.0012);
-      n.vy += (H / 2 - n.y) * (NARROW ? 0.0006 : 0.003);
-      if (n === drag) { n.vx = n.vy = 0; return; }
-      if (n.type === 'core') { n.x += (W / 2 - n.x) * 0.2; n.y += (H / 2 - n.y) * 0.2; n.vx = n.vy = 0; return; }
-      n.vx *= 0.8; n.vy *= 0.8;
-      n.x += n.vx * alpha; n.y += n.vy * alpha;
-      const r = radius(n) + 6;
-      const side = n.type ? Math.max(r, n.label.length * 4.6) : 12 + (n.label.length * (NARROW ? 6 : 6.6));
-      n.x = Math.max(n.type ? side : (n.left ? side : r), Math.min(W - (n.type ? side : (n.left ? r : side)), n.x));
-      n.y = Math.max(r + 24, Math.min(H - r - (n.type ? 26 : 4), n.y));
-    });
-  }
+  let hot = null;
   function render() {
+    rings.forEach((r) => {
+      let d = '';
+      r.pts.forEach((p, i) => { const q = project(p); d += (i ? 'L' : 'M') + q.x.toFixed(1) + ',' + q.y.toFixed(1); });
+      r.el.setAttribute('d', d);
+    });
+    nodes.forEach((n) => { n.s = project(n.p); });
     links.forEach((l) => {
-      l.el.setAttribute('x1', l.a.x.toFixed(1)); l.el.setAttribute('y1', l.a.y.toFixed(1));
-      l.el.setAttribute('x2', l.b.x.toFixed(1)); l.el.setAttribute('y2', l.b.y.toFixed(1));
+      l.el.setAttribute('x1', l.a.s.x.toFixed(1)); l.el.setAttribute('y1', l.a.s.y.toFixed(1));
+      l.el.setAttribute('x2', l.b.s.x.toFixed(1)); l.el.setAttribute('y2', l.b.s.y.toFixed(1));
+      const depth = (l.a.s.z + l.b.s.z) / 2; // -1 (back) .. 1 (front)
+      l.el.style.opacity = hot ? '' : (0.25 + 0.75 * (depth + 1) / 2).toFixed(2);
     });
-    nodes.forEach((n) => {
-      n.el.setAttribute('transform', `translate(${n.x.toFixed(1)},${n.y.toFixed(1)})`);
+    const order = nodes.slice().sort((a, b) => a.s.z - b.s.z);
+    order.forEach((n) => {
+      const k = n.s.f;
+      const front = (n.s.z + 1) / 2; // 0 back .. 1 front
+      n.el.setAttribute('transform', `translate(${n.s.x.toFixed(1)},${n.s.y.toFixed(1)})`);
+      n.inner.setAttribute('transform', `scale(${(k * (W < 640 ? 0.8 : 1)).toFixed(3)})`);
+      n.el.style.opacity = hot ? '' : (0.3 + 0.7 * front).toFixed(2);
+      if (n.type === 'core') n.el.style.opacity = '';
       if (!n.type) {
-        const left = n.x < byId[n.parent].x - 4;
-        if (left !== n.left) {
-          n.left = left;
-          n.text.setAttribute('text-anchor', left ? 'end' : 'start');
-          n.text.setAttribute('x', left ? -14 : 14);
+        // narrow screens: label under the cell; wide: label on the outer side
+        const mode = W < 640 ? 'below' : n.s.x < cx ? 'left' : 'right';
+        if (mode !== n.mode) {
+          n.mode = mode;
+          n.text.setAttribute('text-anchor', mode === 'below' ? 'middle' : mode === 'left' ? 'end' : 'start');
+          n.text.setAttribute('x', mode === 'below' ? 0 : mode === 'left' ? -14 : 14);
+          n.text.setAttribute('y', mode === 'below' ? 22 : 4);
         }
+        // only cells facing you carry a label, so the ball stays readable
+        n.text.style.visibility = (n.s.z > (W < 640 ? 0.25 : 0.05)) || n === hot ? 'visible' : 'hidden';
       }
+      gNodes.appendChild(n.el); // painter's order: back to front
     });
   }
-  // settle before first paint
-  for (let i = 0; i < 400; i++) tick();
-  render();
 
+  // ---------- interaction ----------
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let t0 = 0;
-  function frame(t) {
-    // gentle breathing so the brain feels alive
-    if (!reduce && !drag) {
-      nodes.forEach((n, i) => {
-        n.vx += Math.sin(t / 1400 + i * 1.7) * 0.03;
-        n.vy += Math.cos(t / 1700 + i * 2.3) * 0.03;
-      });
-    }
-    alpha = drag ? 1 : Math.max(0.35, alpha * 0.995);
-    tick(); render();
-    if (svg.isConnected && svg.closest('[hidden]') == null) requestAnimationFrame(frame);
-    else t0 = 0;
-  }
-  window.brainWake = function () { if (!t0) { t0 = 1; size(); requestAnimationFrame(frame); } };
-  window.brainWake();
+  let vx = 0, vy = reduce ? 0 : 0.0022; // angular velocity (rad per frame)
+  let dragging = false, last = null, moved = 0, downNode = null, paused = false;
 
-  // --- highlight neighbours ---
   function setHot(n) {
+    hot = n;
     const near = new Set([n.id]);
     links.forEach((l) => {
       const on = l.a === n || l.b === n;
@@ -246,39 +260,75 @@
     nodes.forEach((m) => { m.el.classList.toggle('dim', !near.has(m.id)); m.el.classList.toggle('hot', m === n); });
   }
   function clearHot() {
+    hot = null;
     links.forEach((l) => l.el.classList.remove('hot', 'dim'));
     nodes.forEach((m) => m.el.classList.remove('dim', 'hot'));
   }
-
-  function toLocal(e) {
-    const b = svg.getBoundingClientRect();
-    return { x: ((e.clientX - b.left) / b.width) * W, y: ((e.clientY - b.top) / b.height) * H };
-  }
   function open(n) { if (window.siteGo) window.siteGo(n.tab, n.anchor); }
 
+  svg.addEventListener('pointerdown', (e) => {
+    dragging = true; moved = 0; last = { x: e.clientX, y: e.clientY };
+    downNode = nodes.find((n) => n.el.contains(e.target)) || null;
+    svg.setPointerCapture(e.pointerId);
+    svg.classList.add('grabbing');
+  });
+  svg.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - last.x, dy = e.clientY - last.y;
+    moved += Math.abs(dx) + Math.abs(dy);
+    last = { x: e.clientX, y: e.clientY };
+    const k = 1 / R;
+    rotate(-dy * k, dx * k);
+    vy = dx * k; vx = -dy * k;
+    render();
+  });
+  function end() {
+    if (!dragging) return;
+    dragging = false;
+    svg.classList.remove('grabbing');
+    if (moved < 6 && downNode) open(downNode);
+    downNode = null;
+  }
+  svg.addEventListener('pointerup', end);
+  svg.addEventListener('pointercancel', end);
+
   nodes.forEach((n) => {
-    let start = null;
-    n.el.addEventListener('pointerenter', () => setHot(n));
-    n.el.addEventListener('pointerleave', () => { if (!drag) clearHot(); });
-    n.el.addEventListener('focus', () => setHot(n));
-    n.el.addEventListener('blur', clearHot);
+    n.el.addEventListener('pointerenter', () => { if (!dragging) { paused = true; setHot(n); render(); } });
+    n.el.addEventListener('pointerleave', () => { paused = false; if (!dragging) { clearHot(); render(); } });
+    n.el.addEventListener('focus', () => { paused = true; setHot(n); render(); });
+    n.el.addEventListener('blur', () => { paused = false; clearHot(); render(); });
     n.el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(n); } });
-    n.el.addEventListener('pointerdown', (e) => {
-      start = { x: e.clientX, y: e.clientY };
-      drag = n; n.el.setPointerCapture(e.pointerId);
-    });
-    n.el.addEventListener('pointermove', (e) => {
-      if (drag !== n) return;
-      const p = toLocal(e);
-      n.x = p.x; n.y = p.y;
-    });
-    n.el.addEventListener('pointerup', (e) => {
-      const moved = start && Math.hypot(e.clientX - start.x, e.clientY - start.y) > 6;
-      drag = null; start = null; alpha = 1;
-      if (!moved) open(n);
-    });
-    n.el.addEventListener('pointercancel', () => { drag = null; start = null; });
+  });
+  // arrow keys spin the ball when it has focus
+  svg.setAttribute('tabindex', '0');
+  svg.addEventListener('keydown', (e) => {
+    const step = 0.12;
+    if (e.key === 'ArrowLeft') rotate(0, -step); else if (e.key === 'ArrowRight') rotate(0, step);
+    else if (e.key === 'ArrowUp') rotate(-step, 0); else if (e.key === 'ArrowDown') rotate(step, 0);
+    else return;
+    e.preventDefault(); render();
   });
 
-  window.addEventListener('resize', () => { size(); });
+  let running = false;
+  function frame() {
+    if (!dragging && !paused) {
+      rotate(vx, vy);
+      // ease back to a gentle idle spin
+      const idle = reduce ? 0 : 0.0022;
+      vx *= 0.95; vy = vy * 0.95 + idle * 0.05;
+      render();
+    }
+    if (svg.closest('[hidden]') == null && visible) requestAnimationFrame(frame);
+    else running = false;
+  }
+  let visible = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((es) => { visible = es[0].isIntersecting; if (visible) window.brainWake(); }).observe(svg);
+  }
+  window.brainWake = function () {
+    size(); render();
+    if (!running) { running = true; requestAnimationFrame(frame); }
+  };
+  window.brainWake();
+  window.addEventListener('resize', () => { size(); render(); });
 })();
