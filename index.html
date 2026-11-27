@@ -354,12 +354,25 @@
       </div>
     </article>
 
-    <article class="feature ripstop panel small" id="f-papagalul">
+    <article class="feature ripstop panel" id="f-papagalul">
       <div class="feature-text">
-        <span class="tag">Coming soon</span>
+        <span class="tag">Paragliding · Voice assistant · Beta 0.1</span>
         <h3>Papagalul</h3>
-        <p>Details coming soon.</p>
+        <p>A voice flight assistant for paragliding. Hold one button on a small pod on the riser and ask "Wind?" or "Where can I land?"; the answer comes back in your helmet earbud within a second or two.</p>
+        <p>The language model only chooses which tool to call. Every number the pilot hears comes from deterministic, testable code.</p>
+        <ul class="ticks">
+          <li><b>Wind from your circles</b>: a least-squares circle fit on GPS ground speed, with a quality flag (about 0.3 km/h and 1° error after one circle in simulation)</li>
+          <li><b>Reachable landings</b>, corrected for wind and terrain clearance and ranked by arrival height</li>
+          <li><b>Works offline</b>: keyword router, or a small local model (Ollama) constrained to a JSON schema</li>
+          <li><b>3D-printable pod</b>, 81 × 50 × 36 mm, with a GNSS, a barometer, an IMU and Bluetooth to the phone</li>
+        </ul>
+        <p class="small muted">Beta 0.1 is tested on simulated flights and synthetic terrain. Real IGC tracks, a landing database, forecasts and speech are next.</p>
       </div>
+      <figure class="feature-art papagalul-art">
+        <img src="img/papagalul-concept.jpg" alt="Concept: a pilot asks where to land, Papagalul answers in the earbud, and the phone shows wind and landing fields ranked by margin" loading="lazy" width="1200" height="750">
+        <img class="pod" src="img/papagalul-pod.jpg" alt="Papagalul Pod v0.1, a 3D-printable enclosure" loading="lazy" width="540" height="430">
+        <figcaption>Concept of a future version, and the 3D-printable pod v0.1.</figcaption>
+      </figure>
     </article>
 
     <div class="more-soon">More will come…</div>
@@ -406,8 +419,12 @@
       <span class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
       <div>
         <span class="label">Office</span>
-        <p>IVI &amp; Vetsuisse Faculty, University of Bern<br>Länggassstrasse 120, 3012 Bern</p>
-        <a class="small" href="https://www.openstreetmap.org/?mlat=46.95229&amp;mlon=7.42657#map=17/46.95229/7.42657">Open in maps →</a>
+        <p>Institute of Virology and Immunology (IVI)<br>Sensemattstrasse 293, 3147 Mittelhäusern (Bern)</p>
+        <a class="small" href="https://www.openstreetmap.org/?mlat=46.88081&amp;mlon=7.36286#map=16/46.88081/7.36286">Open in maps →</a>
+        <div class="map-wrap">
+          <iframe title="Map: IVI, Sensemattstrasse 293, Mittelhäusern" loading="lazy" referrerpolicy="no-referrer"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=7.3540%2C46.8768%2C7.3718%2C46.8848&amp;layer=mapnik&amp;marker=46.88081%2C7.36286"></iframe>
+        </div>
       </div>
     </div>
     <div class="c-block">
@@ -423,10 +440,6 @@
     </div>
   </div>
 
-  <div class="map-wrap">
-    <iframe title="Map: Länggassstrasse 120, Bern" loading="lazy" referrerpolicy="no-referrer"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=7.4205%2C46.9497%2C7.4327%2C46.9549&amp;layer=mapnik&amp;marker=46.95229%2C7.42657"></iframe>
-  </div>
 
   <div class="photo-strip">
     <img src="img/glider-sky.jpg" alt="Paragliding above alpine cliffs" loading="lazy">
