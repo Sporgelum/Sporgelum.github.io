@@ -24,22 +24,24 @@
     { id: 'mps', label: 'Cross-species immunity', parent: 'projects', tab: 'projects', anchor: 'p-mps' },
     { id: 'multiome', label: 'RNA + ATAC', parent: 'projects', tab: 'projects', anchor: 'p-multiome' },
     { id: 'variants', label: 'Variant calling', parent: 'projects', tab: 'projects', anchor: 'p-variants' },
+    { id: 'bees', label: 'MilMieles bees', parent: 'projects', tab: 'projects', anchor: 'p-milmieles' },
     { id: 'shiny', label: 'Shiny apps', parent: 'projects', tab: 'projects', anchor: 'p-shiny' },
 
     { id: 'thermal', label: 'Thermal Honey', parent: 'future', tab: 'future', anchor: 'f-thermal' },
     { id: 'atlas', label: 'Genome Variant Atlas', parent: 'future', tab: 'future', anchor: 'f-genome' },
     { id: 'disease', label: 'Disease embeddings', parent: 'future', tab: 'future', anchor: 'f-disease' },
+    { id: 'tandem', label: 'Tandem & instructor', parent: 'future', tab: 'future', anchor: 'f-tandem' },
     { id: 'papagalul', label: 'Papagalul', parent: 'future', tab: 'future', anchor: 'f-papagalul' },
 
     { id: 'scirep', label: 'Sci. Reports 2023', parent: 'publications', tab: 'publications' },
     { id: 'cellrep', label: 'Cell Reports 2019', parent: 'publications', tab: 'publications' },
 
-    { id: 'job', label: 'Open to work 2027', parent: 'contact', tab: 'contact', news: true },
+    { id: 'job', label: 'Open to work · summer 2027', parent: 'contact', tab: 'contact', news: true },
     { id: 'fly', label: 'Paragliding', parent: 'contact', tab: 'contact' },
   ];
   const cross = [
     ['variants', 'atlas'], ['adipose', 'disease'], ['mps', 'atlas'], ['shiny', 'atlas'],
-    ['fly', 'thermal'], ['zf', 'scirep'], ['zf', 'cellrep'], ['ivi', 'mps'], ['epfl', 'adipose'],
+    ['fly', 'thermal'], ['fly', 'tandem'], ['tandem', 'thermal'], ['zf', 'scirep'], ['zf', 'cellrep'], ['ivi', 'mps'], ['epfl', 'adipose'],
     ['epfl', 'multiome'], ['anat', 'zf'], ['job', 'me'],
   ];
 
