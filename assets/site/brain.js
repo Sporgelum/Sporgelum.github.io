@@ -14,7 +14,7 @@
     { id: 'publications', label: 'Publications', type: 'hub', tab: 'publications' },
     { id: 'contact', label: 'Contact', type: 'hub', tab: 'contact' },
 
-    { id: 'ivi', label: 'IVI · Bern (2024–now)', parent: 'cv', tab: 'cv' },
+    { id: 'ivi', label: 'PhD · IVI Bern', parent: 'cv', tab: 'cv' },
     { id: 'epfl', label: 'EPFL', parent: 'cv', tab: 'cv' },
     { id: 'anat', label: 'Anatomy · Bern', parent: 'cv', tab: 'cv' },
     { id: 'msc', label: 'MSc × 2 · Madrid', parent: 'cv', tab: 'cv' },
@@ -24,6 +24,7 @@
     { id: 'mps', label: 'Cross-species immunity', parent: 'projects', tab: 'projects', anchor: 'p-mps' },
     { id: 'multiome', label: 'RNA + ATAC', parent: 'projects', tab: 'projects', anchor: 'p-multiome' },
     { id: 'variants', label: 'Variant calling', parent: 'projects', tab: 'projects', anchor: 'p-variants' },
+    { id: 'vacc', label: 'Vaccine responders', parent: 'projects', tab: 'projects', anchor: 'p-vaccinology' },
     { id: 'bees', label: 'MilMieles bees', parent: 'projects', tab: 'projects', anchor: 'p-milmieles' },
     { id: 'shiny', label: 'Shiny apps', parent: 'projects', tab: 'projects', anchor: 'p-shiny' },
 
@@ -35,13 +36,14 @@
 
     { id: 'scirep', label: 'Sci. Reports 2023', parent: 'publications', tab: 'publications' },
     { id: 'cellrep', label: 'Cell Reports 2019', parent: 'publications', tab: 'publications' },
+    { id: 'discim', label: 'Discovery Immunol. 2026', parent: 'publications', tab: 'publications' },
 
     { id: 'job', label: 'Open to work · summer 2027', parent: 'contact', tab: 'contact', news: true },
     { id: 'fly', label: 'Paragliding', parent: 'contact', tab: 'contact' },
   ];
   const cross = [
     ['variants', 'atlas'], ['adipose', 'disease'], ['mps', 'atlas'], ['shiny', 'atlas'],
-    ['fly', 'thermal'], ['fly', 'tandem'], ['tandem', 'thermal'], ['zf', 'scirep'], ['zf', 'cellrep'], ['ivi', 'mps'], ['epfl', 'adipose'],
+    ['fly', 'thermal'], ['fly', 'tandem'], ['tandem', 'thermal'], ['zf', 'scirep'], ['zf', 'cellrep'], ['ivi', 'mps'], ['ivi', 'vacc'], ['discim', 'mps'], ['epfl', 'adipose'],
     ['epfl', 'multiome'], ['anat', 'zf'], ['job', 'me'],
   ];
 
