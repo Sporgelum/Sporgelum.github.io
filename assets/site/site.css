@@ -1,11 +1,11 @@
 /* ---------- tokens ---------- */
 :root {
-  --bg: #12100c;
-  --bg-2: #1a1610;
-  --panel: #1d1912;
+  --bg: #211c15;
+  --bg-2: #2a241b;
+  --panel: #2b251c;
   --ink: #f3ead8;
-  --ink-2: #c9bc9f;
-  --muted: #8f8470;
+  --ink-2: #d6caae;
+  --muted: #a3967e;
   --honey: #f2a516;
   --honey-2: #ffcf5a;
   --amber-deep: #b8610a;
@@ -97,7 +97,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 14px clamp(16px, 4vw, 48px);
-  background: linear-gradient(to bottom, rgba(18,16,12,.92), rgba(18,16,12,.65));
+  background: linear-gradient(to bottom, rgba(33,28,21,.92), rgba(33,28,21,.68));
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -348,7 +348,7 @@ main { padding: 0 clamp(16px, 4vw, 48px); max-width: 1240px; margin: 0 auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
-.node text { paint-order: stroke; stroke: rgba(18,16,12,.85); stroke-width: 4px; stroke-linejoin: round; }
+.node text { paint-order: stroke; stroke: rgba(36,33,29,.88); stroke-width: 4px; stroke-linejoin: round; }
 .node.core text.core-label { fill: #1a1206; stroke: none; }
 @media (max-width: 640px) {
   #brain { height: 72svh; min-height: 420px; }
@@ -369,12 +369,13 @@ main { padding: 0 clamp(16px, 4vw, 48px); max-width: 1240px; margin: 0 auto; }
 }
 .brain-screen::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
-  background: #141311; /* flat, warm near-black: calm, nothing competing with the ball */
+  background: #24211d; /* flat, warm near-black: calm, nothing competing with the ball */
 }
 .brain-screen::after { /* soft fade from the honeycomb hero into the dark */
   content: ""; position: absolute; left: 0; right: 0; top: -120px; height: 120px; z-index: -2;
-  background: linear-gradient(to bottom, rgba(20,19,17,0), #141311);
+  background: linear-gradient(to bottom, rgba(36,33,29,0), #24211d);
   pointer-events: none;
 }
 .bee-sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 .brain-screen .ball { stroke: rgba(255,207,90,.3); }
+.scroll-cue { transition: opacity .6s; } .honey-game .scroll-cue { opacity: 0; pointer-events: none; }
